@@ -4,6 +4,15 @@
 
 数据全部来自公开页面，不编造、不用旧数据冒充当天。
 
+## 双远端
+
+| 平台 | 仓库 |
+| --- | --- |
+| GitHub | https://github.com/icecolaa/github-trending-daily |
+| Gitee | https://gitee.com/ice-colaa/github-trending-daily |
+
+本地 `origin` 指 GitHub、`mirror` 指 Gitee，`scripts/sync_remotes.py` 一次推两端，互不影响。
+
 ## 示例产物
 
 2026-11-04：Top10 合计 **+13,886** 星，榜首 `vercel-labs/agent-desktop` 单日 **+2,463** 星。

@@ -1,0 +1,147 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>card 6</title><style>
+:root{
+  --bg:#f3f6ff;--card:#ffffff;--ink:#0d1b3e;--muted:#64719a;--accent:#3159e8;
+  --hot:#f0442f;--hot2:#ff9d2e;--line:rgba(13,27,62,.10);--pill:rgba(49,89,232,.07);
+  --grid:rgba(49,89,232,.055);--glow1:rgba(88,132,255,.30);--glow2:rgba(255,138,90,.22);
+  --ghost:rgba(49,89,232,.055);--ghost2:rgba(49,89,232,.20);
+  --shadow:0 10px 30px rgba(24,45,110,.07);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1440px;overflow:hidden}
+body{
+  font-family:"Microsoft YaHei UI","Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif;
+  background:var(--bg);color:var(--ink);position:relative;
+  -webkit-font-smoothing:antialiased;
+}
+.bg-grid{
+  position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:54px 54px;mask-image:linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.15));
+}
+.glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none}
+.g1{width:620px;height:620px;top:-260px;right:-200px;background:var(--glow1);opacity:.55}
+.g2{width:520px;height:520px;bottom:-260px;left:-220px;background:var(--glow2);opacity:.45}
+.wrap{position:relative;z-index:2;width:100%;height:100%;padding:64px 72px 54px;display:flex;flex-direction:column}
+.hd{display:flex;justify-content:space-between;align-items:center;font-size:22px;letter-spacing:2px;font-weight:700}
+.hd .brand{color:var(--accent);display:flex;align-items:center;gap:12px}
+.hd .dot{width:12px;height:12px;border-radius:50%;background:var(--hot);display:inline-block}
+.hd .date{color:var(--muted);font-weight:600;letter-spacing:1px}
+.ft{margin-top:auto;display:flex;justify-content:space-between;align-items:center;
+   font-size:20px;color:var(--muted);border-top:1px solid var(--line);padding-top:22px}
+.ft .pg{font-weight:800;color:var(--ink);letter-spacing:3px}
+.big-num{position:absolute;right:34px;bottom:56px;font-size:420px;font-weight:900;
+   line-height:1;color:var(--ghost);letter-spacing:-24px;pointer-events:none;z-index:1}
+.pill{display:inline-block;padding:11px 24px;border-radius:999px;font-size:22px;font-weight:700;
+   background:var(--pill);color:var(--accent);border:1px solid var(--line)}
+.hot{color:var(--hot)}
+.accent{color:var(--accent)}
+.muted{color:var(--muted)}
+.mono{font-family:"Consolas","SFMono-Regular",monospace;font-variant-numeric:tabular-nums}
+
+/* 封面 */
+.cover-title{font-size:104px;font-weight:900;line-height:1.16;letter-spacing:-3px;margin-top:96px}
+.cover-title .num{font-size:132px;background:linear-gradient(100deg,var(--hot),var(--hot2));
+   -webkit-background-clip:text;background-clip:text;color:transparent}
+.cover-sub{font-size:64px;font-weight:900;letter-spacing:-2px;margin-top:8px}
+.cover-kicker{font-size:28px;color:var(--muted);margin-top:28px;line-height:1.6}
+.cover-pills{display:flex;gap:14px;flex-wrap:wrap;margin-top:48px}
+.cover-stats{display:flex;gap:0;margin-top:auto;border-top:1px solid var(--line);padding-top:34px}
+.cover-stats .s{flex:1;border-right:1px solid var(--line);padding-left:26px}
+.cover-stats .s:first-child{padding-left:0}
+.cover-stats .s:last-child{border-right:0}
+.cover-stats .v{font-size:48px;font-weight:900;letter-spacing:-1px}
+.cover-stats .l{font-size:20px;color:var(--muted);margin-top:6px}
+
+/* 看点 */
+.sec-title{font-size:66px;font-weight:900;letter-spacing:-2px;margin-top:66px}
+.sec-desc{font-size:22px;color:var(--muted);margin-top:12px}
+.overview{font-size:31px;line-height:1.75;margin-top:42px;font-weight:600}
+.trends{margin-top:52px;display:flex;flex-direction:column;gap:20px}
+.trend{display:flex;align-items:center;gap:26px;background:var(--card);
+   border:1px solid var(--line);border-radius:24px;padding:28px 30px;box-shadow:var(--shadow)}
+.trend .n{font-size:44px;font-weight:900;color:var(--hot);min-width:74px}
+.trend .t{font-size:31px;font-weight:700;line-height:1.4}
+.bars{margin-top:44px;background:var(--card);border:1px solid var(--line);
+   border-radius:24px;padding:26px 30px 22px;box-shadow:var(--shadow)}
+.bars h3{font-size:23px;font-weight:900;margin-bottom:20px;letter-spacing:1px}
+.bar{display:flex;align-items:center;gap:16px;margin:15px 0;font-size:20px}
+.bar .bn{width:230px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
+.bar .track{flex:1;height:15px;background:var(--pill);border-radius:99px;overflow:hidden}
+.bar .track i{display:block;height:100%;border-radius:99px;
+   background:linear-gradient(90deg,var(--hot),var(--hot2))}
+.bar .bv{width:120px;text-align:right;font-weight:900;color:var(--hot)}
+.stat-row{display:flex;gap:18px;margin-top:auto;margin-bottom:8px}
+.stat{flex:1;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px 24px;text-align:center}
+.stat .v{font-size:46px;font-weight:900}
+.stat .l{font-size:19px;color:var(--muted);margin-top:8px}
+.note{font-size:19px;color:var(--muted);line-height:1.6;margin-top:26px}
+
+/* 榜单 */
+.rank-head{display:flex;align-items:flex-end;justify-content:space-between;margin-top:52px}
+.rank-head .t{font-size:68px;font-weight:900;letter-spacing:-2px}
+.rank-head .s{font-size:21px;color:var(--muted);padding-bottom:12px}
+.list{margin-top:34px;display:flex;flex-direction:column;gap:20px}
+.row{position:relative;background:var(--card);border:1px solid var(--line);border-radius:26px;
+   padding:26px 30px 24px 116px;min-height:242px;box-shadow:var(--shadow)}
+.row .rk{position:absolute;left:26px;top:26px;font-size:66px;font-weight:900;
+   color:var(--ghost2);line-height:1;letter-spacing:-4px}
+.row .top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.repo-box{flex:1;min-width:0;line-height:1.12}
+.owner-line{font-size:19px;font-weight:700;color:var(--muted);margin-bottom:8px;letter-spacing:.5px;
+   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.repo-name{font-weight:900;letter-spacing:-1px;white-space:nowrap;line-height:1.1}
+.row .delta{font-size:52px;font-weight:900;color:var(--hot);white-space:nowrap;letter-spacing:-2px}
+.row .delta small{font-size:22px;color:var(--muted);font-weight:700;margin-left:6px}
+.row .meta{display:flex;gap:12px;align-items:center;margin-top:14px}
+.row .tag{font-size:19px;font-weight:700;color:var(--accent);background:var(--pill);
+   border:1px solid var(--line);border-radius:999px;padding:5px 16px}
+.row .total{font-size:20px;color:var(--muted)}
+.row .desc{font-size:25px;line-height:1.5;margin-top:16px;color:var(--ink);font-weight:600}
+.fill-note{margin-top:26px;background:var(--pill);border:1px dashed var(--line);
+   border-radius:22px;padding:24px 30px;font-size:21px;line-height:1.6;color:var(--muted)}
+.full{margin-top:30px;background:var(--card);border:1px solid var(--line);
+   border-radius:24px;padding:26px 30px;box-shadow:var(--shadow)}
+.full h3{font-size:24px;font-weight:900;margin-bottom:18px;letter-spacing:1px}
+.full .fr{display:flex;justify-content:space-between;align-items:center;
+   font-size:21px;padding:9px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+.full .fr:last-child{border-bottom:0}
+.full .fr .n{color:var(--muted);width:44px;font-weight:800}
+.full .fr .nm{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-right:16px}
+.full .fr .d{color:var(--hot);font-weight:800}
+
+/* 结尾 */
+.end-title{font-size:88px;font-weight:900;letter-spacing:-3px;margin-top:130px;line-height:1.25}
+.end-sub{font-size:31px;color:var(--muted);line-height:1.7;margin-top:32px}
+.tags{display:flex;flex-wrap:wrap;gap:14px;margin-top:52px}
+.tags span{font-size:23px;font-weight:700;color:var(--accent);background:var(--pill);
+  border:1px solid var(--line);border-radius:999px;padding:12px 22px}
+.end-cta{margin-top:60px;background:var(--accent);color:#fff;border-radius:26px;
+  padding:34px 40px;font-size:32px;font-weight:800;line-height:1.5;box-shadow:var(--shadow)}
+.end-src{margin-top:auto;font-size:19px;color:var(--muted);line-height:1.7;
+  border-top:1px solid var(--line);padding-top:26px}
+</style></head><body>
+<div class="bg-grid"></div><div class="glow g1"></div><div class="glow g2"></div>
+<div class="big-num">06</div>
+<div class="wrap">
+  <div class="hd"><div class="brand"><span class="dot"></span>GITHUB 飙升榜</div>
+    <div class="date">2026.11.04</div></div>
+  
+      <div class="end-title">你最想<br>试哪个？</div>
+      <div class="end-sub">评论区聊聊 👇 也欢迎交换你收藏的神器。<br>关注我，每天 3 分钟刷完 GitHub 热榜，不迷路。</div>
+      <div class="tags"><span>#程序员</span><span>#Github热门</span><span>#开源项目</span><span>#AI编程</span><span>#技术分享</span><span>#效率工具</span></div>
+      <div class="end-cta">完整 Top10 详情 / 技术亮点 / 许可证<br>见今日 Markdown 报告</div>
+      <div class="end-src">数据口径：GitHub Trending 日榜 stars today，按当日新增 star 降序；总 star 为抓取时页面数值。<br>来源：https://github.com/trending?since=daily</div>
+  <div class="ft"><div>每日 3 分钟 · 刷完 GitHub 热榜</div>
+    <div class="pg mono">06 / 06</div></div>
+</div>
+<script>
+document.querySelectorAll('.repo-name').forEach(function(e){
+  var s = parseFloat(getComputedStyle(e).fontSize);
+  var guard = 0;
+  while (e.scrollWidth > e.clientWidth + 2 && s > 24 && guard++ < 40) {
+    s -= 1; e.style.fontSize = s + 'px';
+  }
+});
+</script>
+</body></html>

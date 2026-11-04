@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-04",
+  "window": "GitHub Trending · daily · 抓取于 2026-11-04 23:33 (GMT+8)",
+  "headline": "一天狂涨 2,463 星",
+  "subhead": "GitHub 飙升榜 Top 10",
+  "kicker": "每日 3 分钟，刷完今天涨最猛的开源项目",
+  "overview": "今天日榜前 10 里，AI Agent 工具链占了半壁：桌面操控、持久记忆、并行 worktree、工程技能库同时上榜。英伟达的图谱推理框架空降第 2，老牌项目 Scrapling、MoneyPrinterTurbo 继续放量。",
+  "trends": [
+    "AI Agent 工具链集体屠榜",
+    "上下文与推理层成为新战场",
+    "本地化、离线可跑的工具更吃香"
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "repo": "vercel-labs/agent-desktop",
+      "owner": "vercel-labs",
+      "name": "agent-desktop",
+      "lang": "Rust",
+      "new_stars": 2463,
+      "total_stars": 14304,
+      "one_liner": "给 AI Agent 用的电脑操作 CLI，让模型直接操控桌面软件"
+    },
+    {
+      "rank": 2,
+      "repo": "NVIDIA/auto-ontology",
+      "owner": "NVIDIA",
+      "name": "auto-ontology",
+      "lang": "Python",
+      "new_stars": 2053,
+      "total_stars": 4087,
+      "one_liner": "英伟达开源的图谱推理层框架，让 LLM 检索与推理更可解释"
+    },
+    {
+      "rank": 3,
+      "repo": "D4Vinci/Scrapling",
+      "owner": "D4Vinci",
+      "name": "Scrapling",
+      "lang": "Python",
+      "new_stars": 2006,
+      "total_stars": 95974,
+      "one_liner": "自适应网页抓取框架，从单次请求到整站爬取都能扛"
+    },
+    {
+      "rank": 4,
+      "repo": "JiaFeiMiao-K-Cat/DiscImageStudio",
+      "owner": "JiaFeiMiao-K-Cat",
+      "name": "DiscImageStudio",
+      "lang": "C#",
+      "new_stars": 1792,
+      "total_stars": 6144,
+      "one_liner": "官方简介暂缺，待核实"
+    },
+    {
+      "rank": 5,
+      "repo": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "lang": "Shell",
+      "new_stars": 1376,
+      "total_stars": 312566,
+      "one_liner": "Matt Pocock 把 .agents 目录里的工程技能全部开源"
+    },
+    {
+      "rank": 6,
+      "repo": "thedotmack/claude-mem",
+      "owner": "thedotmack",
+      "name": "claude-mem",
+      "lang": "TypeScript",
+      "new_stars": 1165,
+      "total_stars": 112533,
+      "one_liner": "给编程助手装持久记忆，跨会话压缩并回注上下文"
+    },
+    {
+      "rank": 7,
+      "repo": "floci-io/floci",
+      "owner": "floci-io",
+      "name": "floci",
+      "lang": "Java",
+      "new_stars": 1082,
+      "total_stars": 29330,
+      "one_liner": "开源免费的 AWS 本地模拟器，断网也能跑云服务"
+    },
+    {
+      "rank": 8,
+      "repo": "github/spec-kit",
+      "owner": "github",
+      "name": "spec-kit",
+      "lang": "Python",
+      "new_stars": 810,
+      "total_stars": 147051,
+      "one_liner": "GitHub 官方的规格驱动开发（SDD）入门工具箱"
+    },
+    {
+      "rank": 9,
+      "repo": "harry0703/MoneyPrinterTurbo",
+      "owner": "harry0703",
+      "name": "MoneyPrinterTurbo",
+      "lang": "Python",
+      "new_stars": 615,
+      "total_stars": 138681,
+      "one_liner": "输入一个主题或关键词，一键生成高清短视频"
+    },
+    {
+      "rank": 10,
+      "repo": "max-sixty/worktrunk",
+      "owner": "max-sixty",
+      "name": "worktrunk",
+      "lang": "Rust",
+      "new_stars": 524,
+      "total_stars": 10846,
+      "one_liner": "Git worktree 管理 CLI，专为多 Agent 并行干活设计"
+    }
+  ],
+  "note_title": "一天狂涨2463星，GitHub飙升榜Top10",
+  "hashtags": [
+    "#程序员",
+    "#Github热门",
+    "#开源项目",
+    "#AI编程",
+    "#技术分享",
+    "#效率工具"
+  ],
+  "sources": [
+    "https://github.com/trending?since=daily"
+  ],
+  "disclaimer": "数据口径：GitHub Trending 日榜 stars today，按当日新增 star 降序；总 star 为抓取时页面数值。"
+}

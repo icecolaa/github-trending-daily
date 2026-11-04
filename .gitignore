@@ -1,0 +1,29 @@
+# 构建与临时产物
+.build/
+__pycache__/
+*.pyc
+*.log
+_profile*/
+
+# 与每日榜单无关的大体积素材（公众号封面/截图原始素材）
+pic/**/krea2/
+pic/**/_backup-v1/
+pic/**/素材/
+_源截图/
+
+# 公众号线：含 media_id / 本机绝对路径等内部信息，且不属于本仓库主题
+articles/src/*
+!articles/src/*github*
+articles/published/
+pic/**/封面-*.png
+pic/**/分享图-*.png
+scripts/make_cover_krea2.py
+scripts/update_draft_cover.py
+
+# WorkBuddy 内部数据与记忆
+.workbuddy/
+
+# 系统文件
+Thumbs.db
+.DS_Store
+desktop.ini

@@ -157,6 +157,31 @@ body{
   border-top:1px solid var(--line);padding-top:26px}
 """
 
+# ------------------------------------------------------------ 公众号安全封面
+# 贴图草稿在草稿箱列表里拿首图当缩略封面，会居中裁剪并放大，
+# 3:4 的竖图被裁成更窄的卡片时，贴边的字会直接丢。
+# 这里单独出一张 1:1 封面，所有文字压在中心 ~66% 区域内：
+# 裁成 3:4（左右各丢 12.5%）或 9:16（左右各丢 21.9%）时，字仍然完整。
+
+WC = 1080
+
+WC_CSS = """
+html,body{width:1080px;height:1080px;overflow:hidden}
+.wc{position:relative;z-index:2;width:100%;height:100%;padding:0 150px;
+   display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.wc-brand{display:flex;align-items:center;gap:14px;font-size:30px;font-weight:800;
+   letter-spacing:6px;color:var(--accent)}
+.wc-brand .dot{width:12px;height:12px;border-radius:50%;background:var(--hot)}
+.wc-date{font-size:25px;color:var(--muted);font-weight:700;letter-spacing:4px;margin-top:18px}
+.wc-num{font-size:124px;font-weight:900;letter-spacing:-3px;line-height:1.08;margin-top:36px;
+   font-variant-numeric:tabular-nums;
+   background:linear-gradient(100deg,var(--hot),var(--hot2));
+   -webkit-background-clip:text;background-clip:text;color:transparent}
+.wc-label{font-size:50px;font-weight:900;letter-spacing:-1px;margin-top:22px}
+.wc-sub{font-size:26px;color:var(--muted);font-weight:700;letter-spacing:1px;
+   margin-top:26px;line-height:1.65}
+"""
+
 THEMES = {
     "light": """
 :root{
@@ -400,6 +425,25 @@ def build_cards(d, theme, per_page):
     return cards
 
 
+def wechat_cover(d, theme="light"):
+    """公众号贴图首图：1:1，内容居中，抗裁剪。"""
+    items = d["items"]
+    total_new = sum(x["new_stars"] for x in items)
+    langs = len({x["lang"] for x in items if x["lang"] != "暂无数据"})
+    top1 = fmt(items[0]["new_stars"]) if items else 0
+    body = f"""
+      <div class="wc-brand"><span class="dot"></span>GITHUB 飙升榜</div>
+      <div class="wc-date">{esc(d['date'].replace('-', '.'))}</div>
+      <div class="wc-num">+{fmt(total_new)}</div>
+      <div class="wc-label">今日涨星合计</div>
+      <div class="wc-sub">Top{len(items)} 项目 · {langs} 种语言<br>单日榜首 +{top1}</div>"""
+    return f"""<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>wechat cover</title><style>{THEMES[theme]}{CSS}{WC_CSS}</style></head><body>
+<div class="bg-grid"></div><div class="glow g1"></div><div class="glow g2"></div>
+<div class="wc">{body}</div>
+</body></html>"""
+
+
 def note_markdown(d):
     lines = [f"# {d['note_title']}", "", d["overview"], "",
              "老规矩，每天 3 分钟，带你看完今天涨最猛的开源项目👇", ""]
@@ -430,9 +474,9 @@ def find_chrome(explicit=None):
     raise SystemExit("找不到 Chrome/Edge，请用 --chrome 指定路径")
 
 
-def shoot(chrome, html_path, png_path, idx):
+def shoot(chrome, html_path, png_path, idx, size=(W, H)):
     cmd = [chrome, "--headless", "--disable-gpu", "--no-sandbox", "--hide-scrollbars",
-           "--force-device-scale-factor=1", f"--window-size={W},{H}",
+           "--force-device-scale-factor=1", f"--window-size={size[0]},{size[1]}",
            "--virtual-time-budget=1800", f"--user-data-dir={html_path.parent / ('_profile' + str(idx))}",
            f"--screenshot={png_path}", html_path.as_uri()]
     r = subprocess.run(cmd, capture_output=True, timeout=90)
@@ -441,8 +485,8 @@ def shoot(chrome, html_path, png_path, idx):
     try:
         from PIL import Image
         with Image.open(png_path) as im:
-            if im.size != (W, H):
-                raise RuntimeError(f"{png_path.name} 尺寸异常 {im.size}")
+            if im.size != size:
+                raise RuntimeError(f"{png_path.name} 尺寸异常 {im.size}，应为 {size}")
     except ImportError:
         pass
 
@@ -456,6 +500,8 @@ def main():
     ap.add_argument("--per-page", type=int, default=4)
     ap.add_argument("--chrome")
     ap.add_argument("--no-shot", action="store_true")
+    ap.add_argument("--no-wechat-cover", action="store_true",
+                    help="不生成公众号安全封面（默认生成到 pic/<date>/wechat/）")
     args = ap.parse_args()
 
     d = load_data(args)
@@ -480,6 +526,26 @@ def main():
         shoot(chrome, hp, pp, i)
         made.append(pp)
         print(f"[{i}/{len(cards)}] {pp.name}  {pp.stat().st_size // 1024} KB")
+
+    # 公众号安全封面：1:1，单独目录，不混进 01~06 的编号序列
+    wc_png = None
+    if not args.no_wechat_cover:
+        try:
+            wc_dir = out.parent / "wechat"
+            wc_dir.mkdir(parents=True, exist_ok=True)
+            hp = wc_dir / "_公众号封面.html"
+            hp.write_text(wechat_cover(d, args.theme), encoding="utf-8")
+            if args.no_shot:
+                print("HTML:", hp)
+            else:
+                wc_png = wc_dir / "公众号封面.png"
+                shoot(chrome, hp, wc_png, 99, size=(WC, WC))
+                print(f"公众号封面: {wc_png.name}  {wc_png.stat().st_size // 1024} KB  {WC}x{WC}")
+            for prof in wc_dir.glob("_profile*"):
+                if prof.is_dir():
+                    shutil.rmtree(prof, ignore_errors=True)
+        except Exception as e:
+            print(f"! 公众号安全封面生成失败（不影响小红书图文）：{e}")
 
     for prof in out.glob("_profile*"):
         if prof.is_dir():

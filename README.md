@@ -28,20 +28,22 @@
 | 时间 | 位置 | 做什么 | 产物 |
 | --- | --- | --- | --- |
 | 08:45 | 云端 | 抓榜单，写详情报告 + 图文文案 + 结构化数据块 | 消息推送正文 |
-| 09:10 | 本机 | 独立抓榜 → 出 6 张竖版图 → 推公众号贴图草稿 → 提交并推送双远端 | `articles/src/<日期>-github.md`、`pic/<日期>/xhs/`、公众号草稿 |
+| 09:10 | 本机 | 独立抓榜 → 出 6 张竖版图 + 1 张公众号安全封面 → 推贴图草稿 → 提交并推送双远端 | `articles/src/<日期>-github.md`、`pic/<日期>/xhs/`、`pic/<日期>/wechat/`、公众号草稿 |
 
 云端任务关机也能跑，只推送文字；本机任务需要电脑开机，负责出图、公众号草稿与同步。
 
 ## 公众号贴图草稿
 
-`scripts/push_wechat_newspic.py` 把当天 6 张竖版图按顺序推成公众号「图片消息」草稿（`article_type=newspic`），发送后到公众号后台「内容与互动 → 草稿箱 → 图片」确认即可发布。
+`scripts/push_wechat_newspic.py` 把当天的图按顺序推成公众号「图片消息」草稿（`article_type=newspic`）。首位是专门的 1:1「安全封面」（`pic/<日期>/wechat/公众号封面.png`），后接 6 张竖版图；发送后到公众号后台「内容与互动 → 草稿箱 → 图片」确认即可发布。
+
+安全封面是单独出的：草稿箱列表会拿首图当缩略封面并居中裁剪放大，1080×1440 的竖版卡片贴边的字会被切掉，所以另出一张 1:1、文字全部压在中心区的图，任何比例裁切都不缺字。没有这张封面时脚本会自动退回用第一张竖版图。
 
 | 事项 | 说明 |
 | --- | --- |
 | 凭证 | `~/.workbuddy/wechat-publisher.env` 里的 `WECHAT_APP_ID` / `WECHAT_APP_SECRET`，不打印、不落盘 |
 | IP 白名单 | 本机出口 IP 必须加进公众号「设置与开发 → 基本配置 → IP白名单」，否则报 40164 |
 | 幂等 | 同日重复运行会跳过（退出码 3）；要重建用 `--force`，建议先删旧草稿避免重复 |
-| 配额 | 图片走「永久图片素材」，账号有总量上限（约 5000），后台可定期清理旧素材 |
+| 配额 | 图片走「永久图片素材」，账号有总量上限（约 5000），一天 7 张，后台可定期清理旧素材 |
 | 依赖 | 需要 `requests`；标题/描述取自当天的 `发布文案.md`，可用 `--title` / `--desc` 覆盖 |
 
 ```bash
@@ -49,6 +51,7 @@ python scripts/push_wechat_newspic.py                 # 推当天
 python scripts/push_wechat_newspic.py --date 20261105 # 补推指定日期
 python scripts/push_wechat_newspic.py --dry-run       # 只校验，不调接口
 python scripts/push_wechat_newspic.py --force         # 同日再推一份
+python scripts/push_wechat_newspic.py --no-cover      # 不插安全封面，直接用 01-封面
 ```
 
 ## 目录
@@ -56,9 +59,10 @@ python scripts/push_wechat_newspic.py --force         # 同日再推一份
 ```
 articles/src/          每日简报（Markdown + 末尾 XHS_DATA 数据块）
 pic/<日期>/xhs/        当天图文：6 张 PNG、发布文案.md、预览.html、data.json
+pic/<日期>/wechat/     公众号安全封面：1:1 PNG，仅用于贴图草稿首图
 scripts/
-  render_xhs_cards.py  榜单数据 → 1080×1440 竖版卡片
-  push_wechat_newspic.py 竖版图 → 公众号图片消息草稿
+  render_xhs_cards.py  榜单数据 → 1080×1440 竖版卡片 + 1080×1080 安全封面
+  push_wechat_newspic.py 安全封面 + 竖版图 → 公众号图片消息草稿
   sync_remotes.py      提交并推送到多个远端
 ```
 

@@ -194,6 +194,8 @@ def main():
     ap.add_argument("--desc")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--force", action="store_true", help="同日已推过也再推一份")
+    ap.add_argument("--no-cover", action="store_true",
+                    help="不插入 wechat/公众号封面.png 作为首图")
     args = ap.parse_args()
 
     date = args.date or datetime.now().strftime("%Y%m%d")
@@ -202,10 +204,17 @@ def main():
         print(f"✗ 找不到图片目录 {xhs}")
         return 2
 
-    images = sorted([p for p in xhs.glob("*.png") if re.match(r"^\d{2}-", p.name)])[:MAX_IMAGES]
+    images = sorted([p for p in xhs.glob("*.png") if re.match(r"^\d{2}-", p.name)])
     if not images:
         print(f"✗ {xhs} 下没有 01-xx.png 这类卡片")
         return 2
+
+    # 安全封面放首位：草稿箱列表拿首图当缩略图并居中裁剪，竖版卡片的边字会被切
+    cover = xhs.parent / "wechat" / "公众号封面.png"
+    pages = list(images)
+    if cover.exists() and not args.no_cover:
+        pages = [cover] + pages
+    pages = pages[:MAX_IMAGES]
 
     title, desc, tags = read_note(xhs)
     title = args.title or title or f"GitHub 飙升榜 {date}"
@@ -215,8 +224,9 @@ def main():
     print(f"== 贴图草稿 · {date} · {xhs}")
     print(f"   标题：{title}")
     print(f"   描述：{content.splitlines()[0][:60]}…（共 {len(content)} 字）")
-    print(f"   图片：{len(images)} 张")
-    for p in images:
+    print(f"   图片：{len(pages)} 张"
+          f"{'（含安全封面 + ' + str(len(images)) + ' 张竖版图）' if pages is not images and pages[0] is cover else ''}")
+    for p in pages:
         print(f"     - {p.name}  {p.stat().st_size // 1024} KB")
 
     rec = load_record()
@@ -234,11 +244,11 @@ def main():
     print("✓ access_token 获取成功")
 
     media_ids, urls = [], []
-    for i, p in enumerate(images, 1):
+    for i, p in enumerate(pages, 1):
         mid, url = upload_image(token, p)
         media_ids.append(mid)
         urls.append(url)
-        print(f"   [{i}/{len(images)}] ✓ {p.name} → media_id={mid[:20]}…")
+        print(f"   [{i}/{len(pages)}] ✓ {p.name} → media_id={mid[:20]}…")
         time.sleep(0.3)
 
     draft_id = create_newspic_draft(token, title, content, media_ids, thumb_id=media_ids[0])
@@ -249,7 +259,8 @@ def main():
     rec[date] = {
         "media_id": draft_id,
         "title": title,
-        "image_count": len(images),
+        "image_count": len(pages),
+        "image_files": [p.name for p in pages],
         "image_media_ids": media_ids,
         "pushed_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     }

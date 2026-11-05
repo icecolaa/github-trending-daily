@@ -37,6 +37,9 @@ API = "https://api.weixin.qq.com/cgi-bin"
 RECORD = ROOT / ".build" / "wechat_drafts.json"
 MAX_IMAGES = 20
 TITLE_MAX = 64
+# 微信没有开放「合集」接口，草稿建好后只能在后台勾选。
+# 这里只把合集名记下来并打印提醒，别指望接口能写进去。
+ALBUM = "GitHub 飙升榜"
 
 if sys.platform == "win32":
     for _s in (sys.stdout, sys.stderr):
@@ -196,6 +199,8 @@ def main():
     ap.add_argument("--force", action="store_true", help="同日已推过也再推一份")
     ap.add_argument("--no-cover", action="store_true",
                     help="不插入 wechat/公众号封面.png 作为首图")
+    ap.add_argument("--album", default=ALBUM,
+                    help="合集名，仅用于记录与提醒（接口不支持写入合集）")
     args = ap.parse_args()
 
     date = args.date or datetime.now().strftime("%Y%m%d")
@@ -259,6 +264,7 @@ def main():
     rec[date] = {
         "media_id": draft_id,
         "title": title,
+        "album": args.album,
         "image_count": len(pages),
         "image_files": [p.name for p in pages],
         "image_media_ids": media_ids,
@@ -266,7 +272,9 @@ def main():
     }
     save_record(rec)
     print(f"✓ 草稿已建：media_id={draft_id}")
-    print("  到公众号后台「内容与互动 → 草稿箱 → 图片」里就能看到，确认后手动发布")
+    print("  到公众号后台「内容管理 → 草稿箱」里就能看到，确认后手动发布")
+    if args.album:
+        print(f"  ⚠ 接口无法写合集，发表时请在「更多设置 → 合集」选贴图合集「{args.album}」")
     return 0
 
 

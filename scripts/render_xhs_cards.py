@@ -75,17 +75,29 @@ body{
 /* 封面：正文再内缩一层，保证文字都落在中间 ~78% 的安全区里。
    公众号「贴图」草稿箱用第一张图做缩略封面，边缘会被裁，贴边的字会丢掉。 */
 .cover-body{flex:1;display:flex;flex-direction:column;padding:0 58px}
-.cover-title{font-size:90px;font-weight:900;line-height:1.16;letter-spacing:-2px;margin-top:84px}
-.cover-title .num{font-size:114px;background:linear-gradient(100deg,var(--hot),var(--hot2));
+.cover-title{font-size:110px;font-weight:900;line-height:1.14;letter-spacing:-3px;margin-top:58px}
+.cover-title .num{font-size:144px;background:linear-gradient(100deg,var(--hot),var(--hot2));
    -webkit-background-clip:text;background-clip:text;color:transparent}
-.cover-sub{font-size:54px;font-weight:900;letter-spacing:-1px;margin-top:10px}
-.cover-kicker{font-size:26px;color:var(--muted);margin-top:26px;line-height:1.6}
-.cover-pills{display:flex;gap:12px;flex-wrap:wrap;margin-top:42px}
+.cover-sub{font-size:68px;font-weight:900;letter-spacing:-2px;margin-top:12px}
+.cover-kicker{font-size:30px;color:var(--muted);margin-top:28px;line-height:1.55}
+.cover-pills{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+.cover-pills .pill{font-size:23px;padding:12px 23px}
+/* 封面中段：Top3 速览，填掉标题与底部统计之间的空白，也把信息量提上去 */
+.cover-top3{margin-top:56px;background:var(--card);border:1px solid var(--line);
+   border-radius:26px;padding:26px 32px 16px;box-shadow:var(--shadow)}
+.cover-top3 .t3h{font-size:21px;font-weight:900;letter-spacing:4px;color:var(--muted)}
+.cover-top3 .t3{display:flex;align-items:center;gap:18px;padding:25px 0;
+   border-bottom:1px solid var(--line)}
+.cover-top3 .t3:last-child{border-bottom:0}
+.cover-top3 .r{width:56px;font-size:28px;font-weight:900;color:var(--ghost2);letter-spacing:-2px}
+.cover-top3 .n{flex:1;min-width:0;font-size:40px;font-weight:900;letter-spacing:-1px;
+   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cover-top3 .d{font-size:33px;font-weight:900;color:var(--hot);letter-spacing:-1px}
 .cover-stats{display:flex;gap:0;margin-top:auto;border-top:1px solid var(--line);padding-top:30px}
 .cover-stats .s{flex:1;border-right:1px solid var(--line);padding-left:22px}
 .cover-stats .s:first-child{padding-left:0}
 .cover-stats .s:last-child{border-right:0}
-.cover-stats .v{font-size:44px;font-weight:900;letter-spacing:-1px}
+.cover-stats .v{font-size:47px;font-weight:900;letter-spacing:-1px}
 .cover-stats .l{font-size:19px;color:var(--muted);margin-top:6px}
 
 /* 看点 */
@@ -342,12 +354,20 @@ def build_cards(d, theme, per_page):
       <div class="s"><div class="v hot mono">+{fmt(total_new)}</div><div class="l">Top{len(items)} 今日合计涨星</div></div>
       <div class="s"><div class="v mono">+{fmt(items[0]['new_stars']) if items else 0}</div><div class="l">单日最高</div></div>
       <div class="s"><div class="v mono">{langs}</div><div class="l">覆盖语言</div></div>"""
+    t3_rows = "".join(
+        f'<div class="t3"><span class="r mono">{x["rank"]:02d}</span>'
+        f'<span class="n">{esc(x["name"])}</span>'
+        f'<span class="d mono">+{fmt(x["new_stars"])}</span></div>'
+        for x in items[:3])
+    top3_html = (f'<div class="cover-top3"><div class="t3h">今日 TOP 3 · 涨星</div>'
+                 f'{t3_rows}</div>') if t3_rows else ""
     body = f"""
       <div class="cover-body">
         <div class="cover-title">一天狂涨<br><span class="num">{fmt(items[0]['new_stars']) if items else 0}</span> 星</div>
         <div class="cover-sub">{esc(d['subhead'])}</div>
         <div class="cover-kicker">{esc(d['kicker'])}</div>
         <div class="cover-pills">{pills}</div>
+        {top3_html}
         <div class="cover-stats">{stats}</div>
       </div>"""
     cards.append(("01-封面", page_shell(body, p, n, "01", theme)))

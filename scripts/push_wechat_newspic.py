@@ -12,7 +12,9 @@
   1. 从 pic/<日期>/xhs/ 取 01~06 六张 PNG（按文件名排序，最多 20 张）
   2. 逐张上传为「永久图片素材」（material/add_material?type=image）拿 media_id
   3. 调 draft/add 建 article_type=newspic 的草稿，图片按顺序排好
-  4. 把草稿 media_id 与图片清单记到 .build/wechat_drafts.json，防止同日重复推
+  4. 草稿正文＝今日概览 + Top10 逐条榜单（今日新增 / 一句话 / 语言 / 总 star）+ 话题标签，
+     取自当天 发布文案.md；缺文件时用 data.json 的 items 兜底拼装
+  5. 把草稿 media_id 与图片清单记到 .build/wechat_drafts.json，防止同日重复推
 
 凭证: ~/.workbuddy/wechat-publisher.env 里的 WECHAT_APP_ID / WECHAT_APP_SECRET
       （或同名环境变量）。不打印、不落盘。
@@ -95,9 +97,30 @@ def explain(errcode, errmsg):
 
 # ---------------------------------------------------------------- 文案
 
+NUM_EMOJI = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"]
+
+
+def is_rank_line(line):
+    return any(line.startswith(e) for e in NUM_EMOJI)
+
+
+def rank_lines_from_items(items):
+    """data.json 兜底：拼出与 发布文案.md 同格式的榜单行。"""
+    out = []
+    for i, it in enumerate(sorted(items, key=lambda x: x.get("rank") or 0)[:10]):
+        name = it.get("name") or (it.get("repo") or "").split("/")[-1]
+        out.append(
+            f"{NUM_EMOJI[i]} {name}：今日 +{int(it.get('new_stars') or 0):,} 星。"
+            f"{it.get('one_liner') or ''}（{it.get('lang') or '暂无数据'}，"
+            f"总 {int(it.get('total_stars') or 0):,} ★）"
+        )
+    return out
+
+
 def read_note(xhs_dir):
-    """从 发布文案.md 里取标题与描述；缺失时退回 data.json。"""
+    """从 发布文案.md 里取标题、首段、榜单行与话题；缺失时退回 data.json。"""
     title, desc, tags = "", "", ""
+    ranks = []
     note = xhs_dir / "发布文案.md"
     if note.exists():
         txt = note.read_text(encoding="utf-8")
@@ -108,8 +131,8 @@ def read_note(xhs_dir):
                 break
         body = [l for l in lines if l and not l.startswith("#") and not l.startswith("- ")
                 and not l.startswith("---")]
-        paras = [l for l in body if not l.startswith(("1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣",
-                                                     "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"))]
+        ranks = [l.strip() for l in body if is_rank_line(l.strip())][:10]
+        paras = [l for l in body if not is_rank_line(l)]
         if paras:
             desc = paras[0].strip()
         for l in lines:
@@ -122,15 +145,22 @@ def read_note(xhs_dir):
         title = title or d.get("note_title") or d.get("headline") or ""
         desc = desc or d.get("overview") or ""
         tags = tags or " ".join(d.get("hashtags") or [])
-    return title.strip(), desc.strip(), tags.strip()
+        if not ranks and d.get("items"):
+            ranks = rank_lines_from_items(d["items"])
+    return title.strip(), desc.strip(), ranks, tags.strip()
 
 
-def build_content(desc, tags, n_images):
-    parts = [desc] if desc else []
-    parts.append(f"共 {n_images} 张竖版图，滑动看完今天完整的 GitHub 飙升榜。")
+def build_content(desc, ranks, tags, n_images):
+    """草稿正文：概览 → 当日完整榜单（Top10 逐条）→ 图片提示 → 话题。"""
+    parts = []
+    if desc:
+        parts.append(desc)
+    if ranks:
+        parts.append("\n".join(ranks))
+    parts.append(f"完整榜单在上面 {n_images} 张竖版图里，滑动看完今天的 GitHub 飙升榜。")
     if tags:
         parts.append(tags)
-    return "\n".join(parts)
+    return "\n\n".join(parts)
 
 
 # ---------------------------------------------------------------- 接口
@@ -221,14 +251,17 @@ def main():
         pages = [cover] + pages
     pages = pages[:MAX_IMAGES]
 
-    title, desc, tags = read_note(xhs)
+    title, desc, ranks, tags = read_note(xhs)
     title = args.title or title or f"GitHub 飙升榜 {date}"
     desc = args.desc or desc
-    content = build_content(desc, tags, len(images))
+    content = build_content(desc, ranks, tags, len(images))
 
     print(f"== 贴图草稿 · {date} · {xhs}")
     print(f"   标题：{title}")
-    print(f"   描述：{content.splitlines()[0][:60]}…（共 {len(content)} 字）")
+    print(f"   正文：概览 + 榜单 {len(ranks)} 条 + 图片提示 + 话题（共 {len(content)} 字）")
+    if ranks:
+        print(f"     首条：{ranks[0][:52]}")
+        print(f"     末条：{ranks[-1][:52]}")
     print(f"   图片：{len(pages)} 张"
           f"{'（含安全封面 + ' + str(len(images)) + ' 张竖版图）' if pages is not images and pages[0] is cover else ''}")
     for p in pages:

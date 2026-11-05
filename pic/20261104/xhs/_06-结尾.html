@@ -23,6 +23,9 @@ body{
 .g1{width:620px;height:620px;top:-260px;right:-200px;background:var(--glow1);opacity:.55}
 .g2{width:520px;height:520px;bottom:-260px;left:-220px;background:var(--glow2);opacity:.45}
 .wrap{position:relative;z-index:2;width:100%;height:100%;padding:64px 72px 54px;display:flex;flex-direction:column}
+/* 正文区独立成 flex 列：超出时由 FIT_JS 缩放，避免被画布直接裁掉 */
+.main{flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+.inner{flex:1;display:flex;flex-direction:column}
 .hd{display:flex;justify-content:space-between;align-items:center;font-size:22px;letter-spacing:2px;font-weight:700}
 .hd .brand{color:var(--accent);display:flex;align-items:center;gap:12px}
 .hd .dot{width:12px;height:12px;border-radius:50%;background:var(--hot);display:inline-block}
@@ -54,16 +57,16 @@ body{
 .cover-stats .l{font-size:20px;color:var(--muted);margin-top:6px}
 
 /* 看点 */
-.sec-title{font-size:66px;font-weight:900;letter-spacing:-2px;margin-top:66px}
+.sec-title{font-size:66px;font-weight:900;letter-spacing:-2px;margin-top:56px}
 .sec-desc{font-size:22px;color:var(--muted);margin-top:12px}
-.overview{font-size:31px;line-height:1.75;margin-top:42px;font-weight:600}
-.trends{margin-top:52px;display:flex;flex-direction:column;gap:20px}
+.overview{font-size:30px;line-height:1.72;margin-top:34px;font-weight:600}
+.trends{margin-top:40px;display:flex;flex-direction:column;gap:16px}
 .trend{display:flex;align-items:center;gap:26px;background:var(--card);
-   border:1px solid var(--line);border-radius:24px;padding:28px 30px;box-shadow:var(--shadow)}
+   border:1px solid var(--line);border-radius:24px;padding:24px 30px;box-shadow:var(--shadow)}
 .trend .n{font-size:44px;font-weight:900;color:var(--hot);min-width:74px}
 .trend .t{font-size:31px;font-weight:700;line-height:1.4}
-.bars{margin-top:44px;background:var(--card);border:1px solid var(--line);
-   border-radius:24px;padding:26px 30px 22px;box-shadow:var(--shadow)}
+.bars{margin-top:32px;background:var(--card);border:1px solid var(--line);
+   border-radius:24px;padding:24px 30px 20px;box-shadow:var(--shadow)}
 .bars h3{font-size:23px;font-weight:900;margin-bottom:20px;letter-spacing:1px}
 .bar{display:flex;align-items:center;gap:16px;margin:15px 0;font-size:20px}
 .bar .bn{width:230px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
@@ -75,13 +78,13 @@ body{
 .stat{flex:1;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px 24px;text-align:center}
 .stat .v{font-size:46px;font-weight:900}
 .stat .l{font-size:19px;color:var(--muted);margin-top:8px}
-.note{font-size:19px;color:var(--muted);line-height:1.6;margin-top:26px}
+.note{font-size:19px;color:var(--muted);line-height:1.6;margin-top:20px}
 
 /* 榜单 */
-.rank-head{display:flex;align-items:flex-end;justify-content:space-between;margin-top:52px}
+.rank-head{display:flex;align-items:flex-end;justify-content:space-between;margin-top:44px}
 .rank-head .t{font-size:68px;font-weight:900;letter-spacing:-2px}
 .rank-head .s{font-size:21px;color:var(--muted);padding-bottom:12px}
-.list{margin-top:34px;display:flex;flex-direction:column;gap:20px}
+.list{margin-top:28px;display:flex;flex-direction:column;gap:18px}
 .row{position:relative;background:var(--card);border:1px solid var(--line);border-radius:26px;
    padding:26px 30px 24px 116px;min-height:242px;box-shadow:var(--shadow)}
 .row .rk{position:absolute;left:26px;top:26px;font-size:66px;font-weight:900;
@@ -98,13 +101,13 @@ body{
    border:1px solid var(--line);border-radius:999px;padding:5px 16px}
 .row .total{font-size:20px;color:var(--muted)}
 .row .desc{font-size:25px;line-height:1.5;margin-top:16px;color:var(--ink);font-weight:600}
-.fill-note{margin-top:26px;background:var(--pill);border:1px dashed var(--line);
-   border-radius:22px;padding:24px 30px;font-size:21px;line-height:1.6;color:var(--muted)}
-.full{margin-top:30px;background:var(--card);border:1px solid var(--line);
-   border-radius:24px;padding:26px 30px;box-shadow:var(--shadow)}
-.full h3{font-size:24px;font-weight:900;margin-bottom:18px;letter-spacing:1px}
+.fill-note{margin-top:20px;background:var(--pill);border:1px dashed var(--line);
+   border-radius:22px;padding:20px 30px;font-size:21px;line-height:1.6;color:var(--muted)}
+.full{margin-top:22px;background:var(--card);border:1px solid var(--line);
+   border-radius:24px;padding:22px 30px;box-shadow:var(--shadow)}
+.full h3{font-size:24px;font-weight:900;margin-bottom:14px;letter-spacing:1px}
 .full .fr{display:flex;justify-content:space-between;align-items:center;
-   font-size:21px;padding:9px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+   font-size:21px;padding:7px 0;border-bottom:1px solid var(--line);color:var(--ink)}
 .full .fr:last-child{border-bottom:0}
 .full .fr .n{color:var(--muted);width:44px;font-weight:800}
 .full .fr .nm{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-right:16px}
@@ -126,12 +129,12 @@ body{
 <div class="wrap">
   <div class="hd"><div class="brand"><span class="dot"></span>GITHUB 飙升榜</div>
     <div class="date">2026.11.04</div></div>
-  
+  <div class="main"><div class="inner">
       <div class="end-title">你最想<br>试哪个？</div>
       <div class="end-sub">评论区聊聊 👇 也欢迎交换你收藏的神器。<br>关注我，每天 3 分钟刷完 GitHub 热榜，不迷路。</div>
       <div class="tags"><span>#程序员</span><span>#Github热门</span><span>#开源项目</span><span>#AI编程</span><span>#技术分享</span><span>#效率工具</span></div>
       <div class="end-cta">完整 Top10 详情 / 技术亮点 / 许可证<br>见今日 Markdown 报告</div>
-      <div class="end-src">数据口径：GitHub Trending 日榜 stars today，按当日新增 star 降序；总 star 为抓取时页面数值。<br>来源：https://github.com/trending?since=daily</div>
+      <div class="end-src">数据口径：GitHub Trending 日榜 stars today，按当日新增 star 降序；总 star 为抓取时页面数值。<br>来源：https://github.com/trending?since=daily</div></div></div>
   <div class="ft"><div>每日 3 分钟 · 刷完 GitHub 热榜</div>
     <div class="pg mono">06 / 06</div></div>
 </div>
@@ -143,5 +146,23 @@ document.querySelectorAll('.repo-name').forEach(function(e){
     s -= 1; e.style.fontSize = s + 'px';
   }
 });
+
+/* 版面兜底：正文仍超出可用高度时，整体最多缩到 0.92，避免底部被画布裁掉。
+   上限按页面纸边与页脚高度静态计算，不随缩放漂移，避免自我追逐式缩小。 */
+(function fitPage(){
+  var wrap = document.querySelector('.wrap');
+  var main = document.querySelector('.main');
+  var inner = main && main.querySelector('.inner');
+  var ft = document.querySelector('.ft');
+  if (!wrap || !main || !inner || !ft) return;
+  var padB = parseFloat(getComputedStyle(wrap).paddingBottom) || 0;
+  var limit = wrap.getBoundingClientRect().bottom - padB - ft.offsetHeight - 6;
+  var avail = limit - main.getBoundingClientRect().top;
+  var z = 1, guard = 0;
+  while (inner.scrollHeight > avail / z + 1 && z > 0.92 && guard++ < 9) {
+    z -= 0.01;
+    main.style.zoom = z;
+  }
+})();
 </script>
 </body></html>

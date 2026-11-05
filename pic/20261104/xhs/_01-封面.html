@@ -35,7 +35,7 @@ body{
 .ft .pg{font-weight:800;color:var(--ink);letter-spacing:3px}
 .big-num{position:absolute;right:34px;bottom:56px;font-size:420px;font-weight:900;
    line-height:1;color:var(--ghost);letter-spacing:-24px;pointer-events:none;z-index:1}
-.pill{display:inline-block;padding:11px 24px;border-radius:999px;font-size:22px;font-weight:700;
+.pill{display:inline-block;padding:10px 20px;border-radius:999px;font-size:20px;font-weight:700;
    background:var(--pill);color:var(--accent);border:1px solid var(--line)}
 .hot{color:var(--hot)}
 .accent{color:var(--accent)}
@@ -43,18 +43,21 @@ body{
 .mono{font-family:"Consolas","SFMono-Regular",monospace;font-variant-numeric:tabular-nums}
 
 /* 封面 */
-.cover-title{font-size:104px;font-weight:900;line-height:1.16;letter-spacing:-3px;margin-top:96px}
-.cover-title .num{font-size:132px;background:linear-gradient(100deg,var(--hot),var(--hot2));
+/* 封面：正文再内缩一层，保证文字都落在中间 ~78% 的安全区里。
+   公众号「贴图」草稿箱用第一张图做缩略封面，边缘会被裁，贴边的字会丢掉。 */
+.cover-body{flex:1;display:flex;flex-direction:column;padding:0 58px}
+.cover-title{font-size:90px;font-weight:900;line-height:1.16;letter-spacing:-2px;margin-top:84px}
+.cover-title .num{font-size:114px;background:linear-gradient(100deg,var(--hot),var(--hot2));
    -webkit-background-clip:text;background-clip:text;color:transparent}
-.cover-sub{font-size:64px;font-weight:900;letter-spacing:-2px;margin-top:8px}
-.cover-kicker{font-size:28px;color:var(--muted);margin-top:28px;line-height:1.6}
-.cover-pills{display:flex;gap:14px;flex-wrap:wrap;margin-top:48px}
-.cover-stats{display:flex;gap:0;margin-top:auto;border-top:1px solid var(--line);padding-top:34px}
-.cover-stats .s{flex:1;border-right:1px solid var(--line);padding-left:26px}
+.cover-sub{font-size:54px;font-weight:900;letter-spacing:-1px;margin-top:10px}
+.cover-kicker{font-size:26px;color:var(--muted);margin-top:26px;line-height:1.6}
+.cover-pills{display:flex;gap:12px;flex-wrap:wrap;margin-top:42px}
+.cover-stats{display:flex;gap:0;margin-top:auto;border-top:1px solid var(--line);padding-top:30px}
+.cover-stats .s{flex:1;border-right:1px solid var(--line);padding-left:22px}
 .cover-stats .s:first-child{padding-left:0}
 .cover-stats .s:last-child{border-right:0}
-.cover-stats .v{font-size:48px;font-weight:900;letter-spacing:-1px}
-.cover-stats .l{font-size:20px;color:var(--muted);margin-top:6px}
+.cover-stats .v{font-size:44px;font-weight:900;letter-spacing:-1px}
+.cover-stats .l{font-size:19px;color:var(--muted);margin-top:6px}
 
 /* 看点 */
 .sec-title{font-size:66px;font-weight:900;letter-spacing:-2px;margin-top:56px}
@@ -130,14 +133,16 @@ body{
   <div class="hd"><div class="brand"><span class="dot"></span>GITHUB 飙升榜</div>
     <div class="date">2026.11.04</div></div>
   <div class="main"><div class="inner">
-      <div class="cover-title">一天狂涨<br><span class="num">2,463</span> 星</div>
-      <div class="cover-sub">GitHub 飙升榜 Top 10</div>
-      <div class="cover-kicker">每日 3 分钟，刷完今天涨最猛的开源项目</div>
-      <div class="cover-pills"><span class="pill">AI Agent 工具链集体屠榜</span><span class="pill">上下文与推理层成为新战场</span><span class="pill">本地化、离线可跑的工具更吃香</span></div>
-      <div class="cover-stats">
+      <div class="cover-body">
+        <div class="cover-title">一天狂涨<br><span class="num">2,463</span> 星</div>
+        <div class="cover-sub">GitHub 飙升榜 Top 10</div>
+        <div class="cover-kicker">每日 3 分钟，刷完今天涨最猛的开源项目</div>
+        <div class="cover-pills"><span class="pill">AI Agent 工具链集体屠榜</span><span class="pill">上下文与推理层成为新战场</span><span class="pill">本地化、离线可跑的工具更吃香</span></div>
+        <div class="cover-stats">
       <div class="s"><div class="v hot mono">+13,886</div><div class="l">Top10 今日合计涨星</div></div>
       <div class="s"><div class="v mono">+2,463</div><div class="l">单日最高</div></div>
-      <div class="s"><div class="v mono">6</div><div class="l">覆盖语言</div></div></div></div></div>
+      <div class="s"><div class="v mono">6</div><div class="l">覆盖语言</div></div></div>
+      </div></div></div>
   <div class="ft"><div>每日 3 分钟 · 刷完 GitHub 热榜</div>
     <div class="pg mono">01 / 06</div></div>
 </div>

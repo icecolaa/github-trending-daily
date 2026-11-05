@@ -147,16 +147,19 @@ def upload_image(token, path):
     return mid, d.get("url", "")
 
 
-def create_newspic_draft(token, title, content, media_ids):
-    payload = {"articles": [{
+def create_newspic_draft(token, title, content, media_ids, thumb_id=None):
+    article = {
         "article_type": "newspic",
         "title": title[:TITLE_MAX],
         "content": content,
         "need_open_comment": 0,
         "only_fans_can_comment": 0,
         "image_info": {"image_list": [{"image_media_id": m} for m in media_ids]},
-    }]}
-    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    }
+    # 草稿箱列表用 thumb 做缩略封面；不给的话会拿首图瞎裁，封面常常缺字
+    if thumb_id:
+        article["thumb_media_id"] = thumb_id
+    body = json.dumps({"articles": [article]}, ensure_ascii=False).encode("utf-8")
     r = requests.post(f"{API}/draft/add", params={"access_token": token},
                       data=body, headers={"Content-Type": "application/json"}, timeout=60)
     d = r.json()
@@ -238,7 +241,7 @@ def main():
         print(f"   [{i}/{len(images)}] ✓ {p.name} → media_id={mid[:20]}…")
         time.sleep(0.3)
 
-    draft_id = create_newspic_draft(token, title, content, media_ids)
+    draft_id = create_newspic_draft(token, title, content, media_ids, thumb_id=media_ids[0])
     if not draft_id:
         print("✗ 建草稿未返回 media_id")
         return 1

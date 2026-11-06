@@ -1,0 +1,109 @@
+{
+  "date": "2026-11-06",
+  "window": "GitHub Trending · daily · 抓取于 2026-11-06 14:56 (GMT+8)",
+  "headline": "换血日！8 张新面孔狂涨 2301 星",
+  "subhead": "GitHub 飙升榜 Top 10",
+  "kicker": "每日 3 分钟，刷完今天涨最猛的开源项目",
+  "overview": "今天日榜大换血：页面 15 条里 7 条是近 7 天老面孔，按去重规则移入持续在榜，新榜只剩 8 席。新面孔里 5 席是 Agent 技能包，Skills 赛道集体爆发，唯一非 AI 项目是十四年常青树 lz4。",
+  "trends": [
+    "Skills 类仓库集体爆发，页面 15 条中 6 条是技能包",
+    "日榜大换血，去重后新榜 8 席全是新面孔",
+    "老牌压缩库 lz4 上榜，全页唯一非 AI 项目"
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "repo": "scenario-labs/skills",
+      "owner": "scenario-labs",
+      "name": "skills",
+      "lang": "Python",
+      "new_stars": 667,
+      "total_stars": 3240,
+      "one_liner": "让 Agent 直接产出游戏级图像视频音频与3D"
+    },
+    {
+      "rank": 2,
+      "repo": "garrytan/gstack",
+      "owner": "garrytan",
+      "name": "gstack",
+      "lang": "TypeScript",
+      "new_stars": 612,
+      "total_stars": 140153,
+      "one_liner": "Garry Tan 开源的 Claude Code 工具集"
+    },
+    {
+      "rank": 3,
+      "repo": "Usagi-org/ai-goofish-monitor",
+      "owner": "Usagi-org",
+      "name": "ai-goofish-monitor",
+      "lang": "Python",
+      "new_stars": 240,
+      "total_stars": 17924,
+      "one_liner": "Playwright 加 AI 盯闲鱼，多任务监控捡漏"
+    },
+    {
+      "rank": 4,
+      "repo": "microsoft/VibeVoice",
+      "owner": "microsoft",
+      "name": "VibeVoice",
+      "lang": "Python",
+      "new_stars": 223,
+      "total_stars": 56226,
+      "one_liner": "微软开源的前沿语音 AI 模型"
+    },
+    {
+      "rank": 5,
+      "repo": "google/skills",
+      "owner": "google",
+      "name": "skills",
+      "lang": "Python",
+      "new_stars": 211,
+      "total_stars": 22517,
+      "one_liner": "谷歌官方出品的 Agent 技能包"
+    },
+    {
+      "rank": 6,
+      "repo": "ConardLi/garden-skills",
+      "owner": "ConardLi",
+      "name": "garden-skills",
+      "lang": "JavaScript",
+      "new_stars": 175,
+      "total_stars": 14324,
+      "one_liner": "ConardLi 的开源 Skills 集合，前端设计齐全"
+    },
+    {
+      "rank": 7,
+      "repo": "vercel-labs/agent-browser",
+      "owner": "vercel-labs",
+      "name": "agent-browser",
+      "lang": "Rust",
+      "new_stars": 150,
+      "total_stars": 46089,
+      "one_liner": "给 AI Agent 用的浏览器自动化 CLI"
+    },
+    {
+      "rank": 8,
+      "repo": "lz4/lz4",
+      "owner": "lz4",
+      "name": "lz4",
+      "lang": "C",
+      "new_stars": 23,
+      "total_stars": 12466,
+      "one_liner": "老牌极速无损压缩算法，十四年常青树"
+    }
+  ],
+  "note_title": "换血日，8张新面孔狂涨2301星",
+  "hashtags": [
+    "#程序员",
+    "#Github热门",
+    "#开源项目",
+    "#AI编程",
+    "#技术分享",
+    "#效率工具"
+  ],
+  "sources": [
+    "https://github.com/trending?since=daily",
+    "https://docs.github.com/rest/repos/repos"
+  ],
+  "disclaimer": "数据口径：GitHub Trending 日榜 stars today（滚动 24 小时），按当日新增 star 降序；已按近 7 天去重规则剔除 7 个已上榜项目（合计 +10887 星，见报告持续在榜小节），新榜 8 席而非 10 席。总 star 与许可证取自 GitHub REST API，lz4 许可证待核实。"
+}

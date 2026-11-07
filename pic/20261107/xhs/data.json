@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-07",
+  "window": "GitHub Trending · daily · 抓取于 2026-11-07 14:37 (GMT+8)",
+  "headline": "老牌返场！Top10 合计涨 4320 星",
+  "subhead": "GitHub 飙升榜 Top 10",
+  "kicker": "每日 3 分钟，刷完今天涨最猛的开源项目",
+  "overview": "今天日榜画风突变：AI 技能包只剩 Cloudflare 的安全审计 skill 一个（+2548 空降榜首），其余 9 席全是服役十年以上的老牌基础设施——React、Rust、VS Code、Rails、Angular、Prometheus、Ruff、Nushell、Zed。老牌项目单日增量集中在 130 到 310 之间，全页 18 条几乎靠前两名撑起四成涨星。",
+  "trends": [
+    "老牌基础设施集体返场，9 席都是十年以上项目",
+    "Cloudflare 安全审计 skill 空降榜首，一天 2548 星",
+    "Rust 生态占 4 席，工具链类项目最受捧"
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "repo": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "lang": "JavaScript",
+      "new_stars": 2548,
+      "total_stars": 64436,
+      "one_liner": "把编码 Agent 变成安全审计员，六阶段查漏洞"
+    },
+    {
+      "rank": 2,
+      "repo": "zed-industries/zed",
+      "owner": "zed-industries",
+      "name": "zed",
+      "lang": "Rust",
+      "new_stars": 306,
+      "total_stars": 93828,
+      "one_liner": "Rust 写的高性能多人协作代码编辑器"
+    },
+    {
+      "rank": 3,
+      "repo": "microsoft/vscode",
+      "owner": "microsoft",
+      "name": "vscode",
+      "lang": "TypeScript",
+      "new_stars": 301,
+      "total_stars": 195080,
+      "one_liner": "微软开源的主力编辑器，扩展生态最全"
+    },
+    {
+      "rank": 4,
+      "repo": "react/react",
+      "owner": "react",
+      "name": "react",
+      "lang": "JavaScript",
+      "new_stars": 248,
+      "total_stars": 252307,
+      "one_liner": "声明式 Web 与原生 UI 库，前端基本盘"
+    },
+    {
+      "rank": 5,
+      "repo": "rust-lang/rust",
+      "owner": "rust-lang",
+      "name": "rust",
+      "lang": "Rust",
+      "new_stars": 192,
+      "total_stars": 121518,
+      "one_liner": "内存安全又高性能的系统级编程语言"
+    },
+    {
+      "rank": 6,
+      "repo": "astral-sh/ruff",
+      "owner": "astral-sh",
+      "name": "ruff",
+      "lang": "Rust",
+      "new_stars": 169,
+      "total_stars": 50756,
+      "one_liner": "Rust 写的极速 Python 检查与格式化工具"
+    },
+    {
+      "rank": 7,
+      "repo": "prometheus/prometheus",
+      "owner": "prometheus",
+      "name": "prometheus",
+      "lang": "Go",
+      "new_stars": 148,
+      "total_stars": 67241,
+      "one_liner": "云原生监控与时序库，PromQL 的老家"
+    },
+    {
+      "rank": 8,
+      "repo": "rails/rails",
+      "owner": "rails",
+      "name": "rails",
+      "lang": "Ruby",
+      "new_stars": 142,
+      "total_stars": 59058,
+      "one_liner": "约定优于配置的 Ruby 全栈 Web 框架"
+    },
+    {
+      "rank": 9,
+      "repo": "angular/angular",
+      "owner": "angular",
+      "name": "angular",
+      "lang": "TypeScript",
+      "new_stars": 135,
+      "total_stars": 101421,
+      "one_liner": "谷歌的企业级 TypeScript 前端框架"
+    },
+    {
+      "rank": 10,
+      "repo": "nushell/nushell",
+      "owner": "nushell",
+      "name": "nushell",
+      "lang": "Rust",
+      "new_stars": 131,
+      "total_stars": 41022,
+      "one_liner": "把数据当表格处理的新型结构化 Shell"
+    }
+  ],
+  "note_title": "老牌返场，Top10涨4320星",
+  "hashtags": [
+    "#程序员",
+    "#Github热门",
+    "#开源项目",
+    "#AI安全",
+    "#技术分享",
+    "#效率工具"
+  ],
+  "sources": [
+    "https://github.com/trending?since=daily",
+    "https://docs.github.com/rest/repos/repos",
+    "https://blog.cloudflare.com/build-your-own-vulnerability-harness"
+  ],
+  "disclaimer": "数据口径：GitHub Trending 日榜 stars today（滚动 24 小时），按当日新增 star 降序；今日页面 18 条，其中 mattpocock/skills（+2070）、NVIDIA/auto-ontology（+2015）、google/skills（+534）、lz4/lz4（+315）为近 7 天已上榜项目，按去重规则移入持续在榜（合计 +4934 星），新榜取剩余 14 条新面孔中增量最高的 10 席，合计 +4320 星。总 star 与许可证取自 GitHub REST API，zed 与 mpv 许可证待核实。"
+}

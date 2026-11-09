@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-09",
+  "window": "GitHub Trending · daily · 抓取于 2026-11-09 09:08 (GMT+8)",
+  "headline": "百星老将杀疯了！Top8 合计涨 6357 星",
+  "subhead": "GitHub 飙升榜 Top 10",
+  "kicker": "每日 3 分钟，刷完今天涨最猛的开源项目",
+  "overview": "今天日榜只有 9 条，但榜首爆发力拉满：老牌 OSINT 工具 sherlock 单日 +2373 空降榜首，总 star 顺势突破 10 万。新面孔里 AI Agent 占了 6 席——开源 Grok Bot 替代品 OpenMausBot（+1439）、Meta 开源设计系统 astryx（+875）、Anthropic 官方 skills 仓库（+792）领衔，昨天的老牌基建们已集体退场。",
+  "trends": [
+    "sherlock 老牌 OSINT 工具单日 +2373，总 star 破 10 万",
+    "AI Agent 重新回潮，全页 9 条中 6 条直接相关",
+    "Meta 开源内部八年设计系统 astryx，150+ 组件"
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "repo": "sherlock-project/sherlock",
+      "owner": "sherlock-project",
+      "name": "sherlock",
+      "lang": "Python",
+      "new_stars": 2373,
+      "total_stars": 103556,
+      "one_liner": "老牌 OSINT 神器，一次搜遍 400+ 社交平台"
+    },
+    {
+      "rank": 2,
+      "repo": "milind-soni/OpenMausBot",
+      "owner": "milind-soni",
+      "name": "OpenMausBot",
+      "lang": "TypeScript",
+      "new_stars": 1439,
+      "total_stars": 18267,
+      "one_liner": "开源 Grok Bot 替代，聊天软件里养 Agent"
+    },
+    {
+      "rank": 3,
+      "repo": "meta/astryx",
+      "owner": "meta",
+      "name": "astryx",
+      "lang": "TypeScript",
+      "new_stars": 875,
+      "total_stars": 16820,
+      "one_liner": "Meta 内部设计系统开源，150+ 组件可用"
+    },
+    {
+      "rank": 4,
+      "repo": "anthropics/skills",
+      "owner": "anthropics",
+      "name": "skills",
+      "lang": "Python",
+      "new_stars": 792,
+      "total_stars": 189662,
+      "one_liner": "Anthropic 官方 Agent Skills 示例仓库"
+    },
+    {
+      "rank": 5,
+      "repo": "ranxianglei/billion-context",
+      "owner": "ranxianglei",
+      "name": "billion-context",
+      "lang": "TypeScript",
+      "new_stars": 460,
+      "total_stars": 5161,
+      "one_liner": "上下文压缩插件，100K 窗口跑月级会话"
+    },
+    {
+      "rank": 6,
+      "repo": "dsx-ai-factory/nvke",
+      "owner": "dsx-ai-factory",
+      "name": "nvke",
+      "lang": "Go",
+      "new_stars": 345,
+      "total_stars": 855,
+      "one_liner": "NVIDIA 出的 GPU 集群 K8s 管理面"
+    },
+    {
+      "rank": 7,
+      "repo": "google-deepmind/mujoco",
+      "owner": "google-deepmind",
+      "name": "mujoco",
+      "lang": "C++",
+      "new_stars": 41,
+      "total_stars": 16424,
+      "one_liner": "DeepMind 的多关节物理仿真引擎"
+    },
+    {
+      "rank": 8,
+      "repo": "anthropics/claude-quickstarts",
+      "owner": "anthropics",
+      "name": "claude-quickstarts",
+      "lang": "Python",
+      "new_stars": 32,
+      "total_stars": 19425,
+      "one_liner": "Claude API 官方快速上手示例合集"
+    }
+  ],
+  "note_title": "老将杀疯，Top8涨6357星",
+  "hashtags": [
+    "#程序员",
+    "#Github热门",
+    "#开源项目",
+    "#AIAgent",
+    "#AI工具",
+    "#技术分享"
+  ],
+  "sources": [
+    "https://github.com/trending?since=daily",
+    "https://docs.github.com/rest/repos/repos",
+    "https://agentskills.io"
+  ],
+  "disclaimer": "数据口径：GitHub Trending 日榜 stars today（滚动 24 小时），按当日新增 star 降序；今日页面实际返回 9 条（近期最少），其中 vercel-labs/agent-browser（+815）为近 7 天已上榜项目，按去重规则移入持续在榜，新榜为 8 席、合计 +6357 星，不足 10 席原因即页面条数不足。总 star 与许可证取自 GitHub REST API，anthropics/skills 与 billion-context 许可证待核实。"
+}

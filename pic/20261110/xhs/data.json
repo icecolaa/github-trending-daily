@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-10",
+  "window": "GitHub Trending · daily · 2026-11-10 09:16 UTC+8",
+  "headline": "sherlock 单日 +4267 星",
+  "subhead": "GitHub 飙升榜 Top 10",
+  "kicker": "每日开源项目速览",
+  "overview": "sherlock 连庄，单日再涨 4267 星；Top10 合计 +13105，比昨日翻倍。AI Agent 占 6 席，astryx 破 2 万，另有 A 股分析新面孔。",
+  "trends": [
+    "sherlock 连庄，单日 +4267",
+    "Top10 合计 +13105，翻倍",
+    "astryx +3278，总星破 2 万"
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "repo": "sherlock-project/sherlock",
+      "owner": "sherlock-project",
+      "name": "sherlock",
+      "lang": "Python",
+      "new_stars": 4267,
+      "total_stars": 107080,
+      "one_liner": "老牌 OSINT 神器，一次搜遍 400+ 社交平台"
+    },
+    {
+      "rank": 2,
+      "repo": "meta/astryx",
+      "owner": "meta",
+      "name": "astryx",
+      "lang": "TypeScript",
+      "new_stars": 3278,
+      "total_stars": 20113,
+      "one_liner": "Meta 开源设计系统，150+ 组件供人和 Agent"
+    },
+    {
+      "rank": 3,
+      "repo": "milind-soni/OpenMausBot",
+      "owner": "milind-soni",
+      "name": "OpenMausBot",
+      "lang": "TypeScript",
+      "new_stars": 1587,
+      "total_stars": 19692,
+      "one_liner": "开源 Grok Bot 替代，聊天软件里养 Agent"
+    },
+    {
+      "rank": 4,
+      "repo": "anthropics/skills",
+      "owner": "anthropics",
+      "name": "skills",
+      "lang": "Python",
+      "new_stars": 1038,
+      "total_stars": 191000,
+      "one_liner": "Anthropic 官方 Agent 技能示例库"
+    },
+    {
+      "rank": 5,
+      "repo": "vercel-labs/agent-browser",
+      "owner": "vercel-labs",
+      "name": "agent-browser",
+      "lang": "Rust",
+      "new_stars": 916,
+      "total_stars": 48485,
+      "one_liner": "给 AI Agent 用的浏览器自动化 CLI"
+    },
+    {
+      "rank": 6,
+      "repo": "google-deepmind/mujoco",
+      "owner": "google-deepmind",
+      "name": "mujoco",
+      "lang": "C++",
+      "new_stars": 574,
+      "total_stars": 16916,
+      "one_liner": "DeepMind 的多关节物理仿真引擎"
+    },
+    {
+      "rank": 7,
+      "repo": "anthropics/claude-quickstarts",
+      "owner": "anthropics",
+      "name": "claude-quickstarts",
+      "lang": "Python",
+      "new_stars": 551,
+      "total_stars": 20023,
+      "one_liner": "Claude API 官方快速上手示例合集"
+    },
+    {
+      "rank": 8,
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "owner": "ZhuLinsen",
+      "name": "daily_stock_analysis",
+      "lang": "Python",
+      "new_stars": 506,
+      "total_stars": 68869,
+      "one_liner": "多市场股票 LLM 分析，每日推送看板"
+    },
+    {
+      "rank": 9,
+      "repo": "garrytan/gbrain",
+      "owner": "garrytan",
+      "name": "gbrain",
+      "lang": "TypeScript",
+      "new_stars": 216,
+      "total_stars": 32162,
+      "one_liner": "YC 总裁的 Agent 记忆库，带出处可撤回"
+    },
+    {
+      "rank": 10,
+      "repo": "ruvnet/RuView",
+      "owner": "ruvnet",
+      "name": "RuView",
+      "lang": "Rust",
+      "new_stars": 172,
+      "total_stars": 103472,
+      "one_liner": "用 WiFi 信号穿墙感知人体与心率呼吸"
+    }
+  ],
+  "note_title": "老将连庄，Top10涨13105星",
+  "hashtags": [
+    "#GitHub",
+    "#开源项目",
+    "#开发者",
+    "#AIAgent",
+    "#程序员",
+    "#技术分享"
+  ],
+  "sources": [
+    "https://github.com/trending?since=daily",
+    "https://docs.github.com/rest/repos/repos"
+  ],
+  "disclaimer": "按本次页面 stars today 降序取前 10 条；页面实际返回 11 条，第 11 名 homeassistant-ai/ha-mcp（+31 星）未入榜。总 star 取自 GitHub REST API 精确整数。"
+}

@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-11",
+  "window": "GitHub Trending · daily · 2026-11-11 09:14 UTC+8",
+  "headline": "astryx 单日 +3108 星",
+  "subhead": "GitHub 飙升榜 Top 10",
+  "kicker": "每日开源项目速览",
+  "overview": "astryx 接棒登顶，单日 +3108 星；sherlock 退居第二。Skills 三席同榜成最大看点，Top10 合计 +11802，6 席为昨日老面孔。",
+  "trends": [
+    "astryx 登顶，+3108 星",
+    "Skills 三席同榜，共 +3369",
+    "Top10 合计 +11802 星"
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "repo": "meta/astryx",
+      "owner": "meta",
+      "name": "astryx",
+      "lang": "TypeScript",
+      "new_stars": 3108,
+      "total_stars": 22891,
+      "one_liner": "Meta 开源设计系统，150+ 组件供人和 Agent"
+    },
+    {
+      "rank": 2,
+      "repo": "sherlock-project/sherlock",
+      "owner": "sherlock-project",
+      "name": "sherlock",
+      "lang": "Python",
+      "new_stars": 2393,
+      "total_stars": 109004,
+      "one_liner": "老牌 OSINT 神器，一次搜遍 400+ 社交平台"
+    },
+    {
+      "rank": 3,
+      "repo": "anthropics/skills",
+      "owner": "anthropics",
+      "name": "skills",
+      "lang": "Python",
+      "new_stars": 1679,
+      "total_stars": 192352,
+      "one_liner": "Anthropic 官方 Agent 技能示例库"
+    },
+    {
+      "rank": 4,
+      "repo": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "lang": "Shell",
+      "new_stars": 1225,
+      "total_stars": 320947,
+      "one_liner": "Matt Pocock 的工程技能集，小而可组合"
+    },
+    {
+      "rank": 5,
+      "repo": "homeassistant-ai/ha-mcp",
+      "owner": "homeassistant-ai",
+      "name": "ha-mcp",
+      "lang": "Python",
+      "new_stars": 790,
+      "total_stars": 6677,
+      "one_liner": "装进 HACS，让 AI 助手直管智能家居"
+    },
+    {
+      "rank": 6,
+      "repo": "vercel-labs/agent-browser",
+      "owner": "vercel-labs",
+      "name": "agent-browser",
+      "lang": "Rust",
+      "new_stars": 780,
+      "total_stars": 49226,
+      "one_liner": "给 AI Agent 用的浏览器自动化 CLI"
+    },
+    {
+      "rank": 7,
+      "repo": "anthropics/claude-quickstarts",
+      "owner": "anthropics",
+      "name": "claude-quickstarts",
+      "lang": "Python",
+      "new_stars": 531,
+      "total_stars": 20508,
+      "one_liner": "Claude API 官方快速上手示例合集"
+    },
+    {
+      "rank": 8,
+      "repo": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "lang": "JavaScript",
+      "new_stars": 465,
+      "total_stars": 115181,
+      "one_liner": "谷歌工程师的六阶段工程技能包"
+    },
+    {
+      "rank": 9,
+      "repo": "google-deepmind/mujoco",
+      "owner": "google-deepmind",
+      "name": "mujoco",
+      "lang": "C++",
+      "new_stars": 456,
+      "total_stars": 17365,
+      "one_liner": "DeepMind 的多关节物理仿真引擎"
+    },
+    {
+      "rank": 10,
+      "repo": "ranxianglei/billion-context",
+      "owner": "ranxianglei",
+      "name": "billion-context",
+      "lang": "TypeScript",
+      "new_stars": 375,
+      "total_stars": 6320,
+      "one_liner": "上下文压缩插件，撑起月级长会话"
+    }
+  ],
+  "note_title": "Skills 三席同榜，Top10 涨 11802 星",
+  "hashtags": [
+    "#GitHub",
+    "#开源项目",
+    "#开发者",
+    "#AIAgent",
+    "#程序员",
+    "#技术分享"
+  ],
+  "sources": [
+    "https://github.com/trending?since=daily",
+    "https://docs.github.com/rest/repos/repos"
+  ],
+  "disclaimer": "按本次页面 stars today 降序取前 10 条；页面实际返回 12 条，第 11 名 tokio-rs/topcoat（+192）、第 12 名 we-promise/sure（+159）未入榜。总 star 取自 GitHub REST API 精确整数，语言以 API 为准。"
+}

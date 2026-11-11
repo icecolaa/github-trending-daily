@@ -27,6 +27,7 @@ import re
 import shutil
 import subprocess
 import sys
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
@@ -113,7 +114,7 @@ body{
    border-radius:24px;padding:24px 30px 20px;box-shadow:var(--shadow)}
 .bars h3{font-size:23px;font-weight:900;margin-bottom:20px;letter-spacing:1px}
 .bar{display:flex;align-items:center;gap:16px;margin:15px 0;font-size:20px}
-.bar .bn{width:230px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
+.bar .bn{width:290px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
 .bar .track{flex:1;height:15px;background:var(--pill);border-radius:99px;overflow:hidden}
 .bar .track i{display:block;height:100%;border-radius:99px;
    background:linear-gradient(90deg,var(--hot),var(--hot2))}
@@ -304,6 +305,10 @@ def load_data(args):
     items.sort(key=lambda x: (-x["new_stars"], x["rank"]))
     for i, it in enumerate(items, 1):
         it["rank"] = i
+    # 同名不同作者（如 anthropics/skills 与 mattpocock/skills）一律显示 owner/repo，避免读者以为重复
+    name_count = Counter(it["name"].lower() for it in items)
+    for it in items:
+        it["display"] = it["repo"] if name_count[it["name"].lower()] > 1 else it["name"]
     data["items"] = items
     data.setdefault("date", datetime.now().strftime("%Y-%m-%d"))
     data.setdefault("window", f"GitHub Trending · daily · {data['date']}")
@@ -356,7 +361,7 @@ def build_cards(d, theme, per_page):
       <div class="s"><div class="v mono">{langs}</div><div class="l">覆盖语言</div></div>"""
     t3_rows = "".join(
         f'<div class="t3"><span class="r mono">{x["rank"]:02d}</span>'
-        f'<span class="n">{esc(x["name"])}</span>'
+        f'<span class="n">{esc(x["display"])}</span>'
         f'<span class="d mono">+{fmt(x["new_stars"])}</span></div>'
         for x in items[:3])
     top3_html = (f'<div class="cover-top3"><div class="t3h">今日 TOP 3 · 涨星</div>'
@@ -384,7 +389,7 @@ def build_cards(d, theme, per_page):
     top5 = items[:5]
     mx = max((x["new_stars"] for x in top5), default=1) or 1
     bars = "".join(
-        f'<div class="bar"><span class="bn">{esc(x["name"])}</span>'
+        f'<div class="bar"><span class="bn">{esc(x["display"])}</span>'
         f'<div class="track"><i style="width:{max(6, round(x["new_stars"] / mx * 100))}%"></i></div>'
         f'<span class="bv mono">+{fmt(x["new_stars"])}</span></div>' for x in top5)
     body = f"""
@@ -404,15 +409,16 @@ def build_cards(d, theme, per_page):
         hi = chunk[-1]["rank"] if chunk else 0
         rows = []
         for it in chunk:
-            size = 46 if len(it["name"]) <= 14 else (40 if len(it["name"]) <= 20 else 34)
+            label = it["display"]
+            size = 46 if len(label) <= 14 else (40 if len(label) <= 20 else 34)
             owner_html = (f'<div class="owner-line mono">{esc(it["owner"])} /</div>'
-                          if it["owner"] != it["repo"] else "")
+                          if label == it["name"] and it["owner"] != it["repo"] else "")
             rows.append(f"""
               <div class="row">
                 <div class="rk mono">{it['rank']:02d}</div>
                 <div class="top">
                   <div class="repo-box">{owner_html}
-                    <div class="repo-name" style="font-size:{size}px">{esc(it['name'])}</div></div>
+                    <div class="repo-name" style="font-size:{size}px">{esc(label)}</div></div>
                   <div class="delta mono">+{fmt(it['new_stars'])}<small>stars</small></div>
                 </div>
                 <div class="meta"><span class="tag">{esc(it['lang'])}</span>
@@ -469,7 +475,7 @@ def note_markdown(d):
              "老规矩，每天 3 分钟，带你看完今天涨最猛的开源项目👇", ""]
     for i, it in enumerate(d["items"]):
         emoji = NUM_EMOJI[i] if i < len(NUM_EMOJI) else f"({i+1})"
-        lines.append(f"{emoji} {it['name']}：今日 +{fmt(it['new_stars'])} 星。{it['one_liner']}（{it['lang']}，总 {fmt(it['total_stars'])} ★）")
+        lines.append(f"{emoji} {it['display']}：今日 +{fmt(it['new_stars'])} 星。{it['one_liner']}（{it['lang']}，总 {fmt(it['total_stars'])} ★）")
     lines += ["", "你最想试哪个？评论区聊聊👇", "也欢迎交换你收藏的神器。",
               "关注我，每天 3 分钟刷完 GitHub 热榜，不迷路。", "",
               " ".join(d["hashtags"]), "", "---", "",

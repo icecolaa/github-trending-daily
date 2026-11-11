@@ -19,7 +19,8 @@
       "lang": "TypeScript",
       "new_stars": 3108,
       "total_stars": 22891,
-      "one_liner": "Meta 开源设计系统，150+ 组件供人和 Agent"
+      "one_liner": "Meta 开源设计系统，150+ 组件供人和 Agent",
+      "display": "astryx"
     },
     {
       "rank": 2,
@@ -29,7 +30,8 @@
       "lang": "Python",
       "new_stars": 2393,
       "total_stars": 109004,
-      "one_liner": "老牌 OSINT 神器，一次搜遍 400+ 社交平台"
+      "one_liner": "老牌 OSINT 神器，一次搜遍 400+ 社交平台",
+      "display": "sherlock"
     },
     {
       "rank": 3,
@@ -39,7 +41,8 @@
       "lang": "Python",
       "new_stars": 1679,
       "total_stars": 192352,
-      "one_liner": "Anthropic 官方 Agent 技能示例库"
+      "one_liner": "Anthropic 官方 Agent 技能示例库",
+      "display": "anthropics/skills"
     },
     {
       "rank": 4,
@@ -49,7 +52,8 @@
       "lang": "Shell",
       "new_stars": 1225,
       "total_stars": 320947,
-      "one_liner": "Matt Pocock 的工程技能集，小而可组合"
+      "one_liner": "Matt Pocock 的工程技能集，小而可组合",
+      "display": "mattpocock/skills"
     },
     {
       "rank": 5,
@@ -59,7 +63,8 @@
       "lang": "Python",
       "new_stars": 790,
       "total_stars": 6677,
-      "one_liner": "装进 HACS，让 AI 助手直管智能家居"
+      "one_liner": "装进 HACS，让 AI 助手直管智能家居",
+      "display": "ha-mcp"
     },
     {
       "rank": 6,
@@ -69,7 +74,8 @@
       "lang": "Rust",
       "new_stars": 780,
       "total_stars": 49226,
-      "one_liner": "给 AI Agent 用的浏览器自动化 CLI"
+      "one_liner": "给 AI Agent 用的浏览器自动化 CLI",
+      "display": "agent-browser"
     },
     {
       "rank": 7,
@@ -79,7 +85,8 @@
       "lang": "Python",
       "new_stars": 531,
       "total_stars": 20508,
-      "one_liner": "Claude API 官方快速上手示例合集"
+      "one_liner": "Claude API 官方快速上手示例合集",
+      "display": "claude-quickstarts"
     },
     {
       "rank": 8,
@@ -89,7 +96,8 @@
       "lang": "JavaScript",
       "new_stars": 465,
       "total_stars": 115181,
-      "one_liner": "谷歌工程师的六阶段工程技能包"
+      "one_liner": "谷歌工程师的六阶段工程技能包",
+      "display": "agent-skills"
     },
     {
       "rank": 9,
@@ -99,7 +107,8 @@
       "lang": "C++",
       "new_stars": 456,
       "total_stars": 17365,
-      "one_liner": "DeepMind 的多关节物理仿真引擎"
+      "one_liner": "DeepMind 的多关节物理仿真引擎",
+      "display": "mujoco"
     },
     {
       "rank": 10,
@@ -109,7 +118,8 @@
       "lang": "TypeScript",
       "new_stars": 375,
       "total_stars": 6320,
-      "one_liner": "上下文压缩插件，撑起月级长会话"
+      "one_liner": "上下文压缩插件，撑起月级长会话",
+      "display": "billion-context"
     }
   ],
   "note_title": "Skills 三席同榜，Top10 涨 11802 星",

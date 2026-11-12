@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-12",
+  "window": "GitHub Trending · daily · 2026-11-12 09:15 UTC+8",
+  "headline": "astryx 单日 +2776 星",
+  "subhead": "GitHub 飙升榜 Top 10",
+  "kicker": "每日开源项目速览",
+  "overview": "astryx 连续第四天在榜、再涨 2776 星领跑；开源理财应用 sure 以 +1078 空降第二。Agent 相关项目仍占 5 席，Top10 合计 +6895 星。",
+  "trends": [
+    "astryx 四日在榜，仍在榜首",
+    "sure 单日 +1078 空降第二",
+    "Agent 相关项目占 5 席"
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "repo": "meta/astryx",
+      "owner": "meta",
+      "name": "astryx",
+      "lang": "TypeScript",
+      "new_stars": 2776,
+      "total_stars": 25021,
+      "one_liner": "Meta 设计系统，150+ 组件人机通用",
+      "display": "astryx"
+    },
+    {
+      "rank": 2,
+      "repo": "we-promise/sure",
+      "owner": "we-promise",
+      "name": "sure",
+      "lang": "Ruby",
+      "new_stars": 1078,
+      "total_stars": 12973,
+      "one_liner": "开源个人理财应用，看现金流与净资产",
+      "display": "sure"
+    },
+    {
+      "rank": 3,
+      "repo": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "lang": "JavaScript",
+      "new_stars": 787,
+      "total_stars": 115962,
+      "one_liner": "谷歌工程师的六阶段工程技能包",
+      "display": "agent-skills"
+    },
+    {
+      "rank": 4,
+      "repo": "vercel-labs/agent-browser",
+      "owner": "vercel-labs",
+      "name": "agent-browser",
+      "lang": "Rust",
+      "new_stars": 708,
+      "total_stars": 49881,
+      "one_liner": "给 AI Agent 用的浏览器自动化 CLI",
+      "display": "agent-browser"
+    },
+    {
+      "rank": 5,
+      "repo": "homeassistant-ai/ha-mcp",
+      "owner": "homeassistant-ai",
+      "name": "ha-mcp",
+      "lang": "Python",
+      "new_stars": 645,
+      "total_stars": 7380,
+      "one_liner": "装进 HACS，让 AI 直管智能家居",
+      "display": "ha-mcp"
+    },
+    {
+      "rank": 6,
+      "repo": "shadcn/improve",
+      "owner": "shadcn",
+      "name": "improve",
+      "lang": "未标注",
+      "new_stars": 361,
+      "total_stars": 10891,
+      "one_liner": "强模型审代码，写计划给便宜模型执行",
+      "display": "improve"
+    },
+    {
+      "rank": 7,
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "owner": "ZhuLinsen",
+      "name": "daily_stock_analysis",
+      "lang": "Python",
+      "new_stars": 278,
+      "total_stars": 70265,
+      "one_liner": "LLM 驱动的多市场股票分析系统",
+      "display": "daily_stock_analysis"
+    },
+    {
+      "rank": 8,
+      "repo": "GoogleChrome/modern-web-guidance-src",
+      "owner": "GoogleChrome",
+      "name": "modern-web-guidance-src",
+      "lang": "TypeScript",
+      "new_stars": 159,
+      "total_stars": 1764,
+      "one_liner": "给编码 Agent 注入现代 Web 知识",
+      "display": "modern-web-guidance-src"
+    },
+    {
+      "rank": 9,
+      "repo": "openai/codex-security",
+      "owner": "openai",
+      "name": "codex-security",
+      "lang": "TypeScript",
+      "new_stars": 52,
+      "total_stars": 11746,
+      "one_liner": "OpenAI 漏洞扫描 CLI 与 TS SDK",
+      "display": "codex-security"
+    },
+    {
+      "rank": 10,
+      "repo": "TheAlgorithms/Java",
+      "owner": "TheAlgorithms",
+      "name": "Java",
+      "lang": "Java",
+      "new_stars": 51,
+      "total_stars": 67029,
+      "one_liner": "Java 版算法大全，刷题常备",
+      "display": "Java"
+    }
+  ],
+  "note_title": "astryx 再登顶，Top10 涨 6895 星",
+  "hashtags": [
+    "#GitHub",
+    "#开源项目",
+    "#开发者",
+    "#AIAgent",
+    "#程序员",
+    "#技术分享"
+  ],
+  "sources": [
+    "https://github.com/trending?since=daily",
+    "https://docs.github.com/rest/repos/repos"
+  ],
+  "disclaimer": "按本次页面 stars today 降序取前 10 条；页面实际返回 10 条，全部入榜，无缺失或跳过。"
+}

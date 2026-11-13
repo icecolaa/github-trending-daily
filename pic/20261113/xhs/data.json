@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-13",
+  "window": "GitHub Trending · daily · 2026-11-13 09:16 UTC+8",
+  "headline": "astryx 单日 +1830 星",
+  "subhead": "GitHub 飙升榜 Top 10",
+  "kicker": "每日开源项目速览",
+  "overview": "astryx 三连冠再涨 1830 星，开源理财应用 sure 以 +967 稳居第二。llama.cpp 等基础设施项目回潮上榜，Top10 合计 +6253 星。",
+  "trends": [
+    "astryx 五日在榜，豪取三连冠",
+    "llama.cpp 老牌推理引擎回榜",
+    "Web 指南库增量涨 4.6 倍"
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "repo": "meta/astryx",
+      "owner": "meta",
+      "name": "astryx",
+      "lang": "TypeScript",
+      "new_stars": 1830,
+      "total_stars": 26558,
+      "one_liner": "Meta 设计系统，150+ 组件人机通用",
+      "display": "astryx"
+    },
+    {
+      "rank": 2,
+      "repo": "we-promise/sure",
+      "owner": "we-promise",
+      "name": "sure",
+      "lang": "Ruby",
+      "new_stars": 967,
+      "total_stars": 13931,
+      "one_liner": "开源个人理财应用，看现金流与净资产",
+      "display": "sure"
+    },
+    {
+      "rank": 3,
+      "repo": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "lang": "JavaScript",
+      "new_stars": 816,
+      "total_stars": 116682,
+      "one_liner": "谷歌工程师的六阶段工程技能包",
+      "display": "agent-skills"
+    },
+    {
+      "rank": 4,
+      "repo": "GoogleChrome/modern-web-guidance-src",
+      "owner": "GoogleChrome",
+      "name": "modern-web-guidance-src",
+      "lang": "TypeScript",
+      "new_stars": 739,
+      "total_stars": 2996,
+      "one_liner": "给编码 Agent 注入现代 Web 知识",
+      "display": "modern-web-guidance-src"
+    },
+    {
+      "rank": 5,
+      "repo": "openai/codex-security",
+      "owner": "openai",
+      "name": "codex-security",
+      "lang": "TypeScript",
+      "new_stars": 643,
+      "total_stars": 12435,
+      "one_liner": "OpenAI 漏洞扫描 CLI 与 TS SDK",
+      "display": "codex-security"
+    },
+    {
+      "rank": 6,
+      "repo": "Alishahryar1/free-claude-code",
+      "owner": "Alishahryar1",
+      "name": "free-claude-code",
+      "lang": "Python",
+      "new_stars": 415,
+      "total_stars": 69305,
+      "one_liner": "聚合免费额度跑十余种编程 Agent",
+      "display": "free-claude-code"
+    },
+    {
+      "rank": 7,
+      "repo": "CopilotKit/OpenBot",
+      "owner": "CopilotKit",
+      "name": "OpenBot",
+      "lang": "TypeScript",
+      "new_stars": 298,
+      "total_stars": 11628,
+      "one_liner": "开源 AI 同事，自带浏览器与文件",
+      "display": "OpenBot"
+    },
+    {
+      "rank": 8,
+      "repo": "pookjw/HermesEnabler",
+      "owner": "pookjw",
+      "name": "HermesEnabler",
+      "lang": "Objective-C",
+      "new_stars": 218,
+      "total_stars": 1541,
+      "one_liner": "任意 Apple Watch 启用 Hermès 表盘",
+      "display": "HermesEnabler"
+    },
+    {
+      "rank": 9,
+      "repo": "ggml-org/llama.cpp",
+      "owner": "ggml-org",
+      "name": "llama.cpp",
+      "lang": "C++",
+      "new_stars": 176,
+      "total_stars": 134567,
+      "one_liner": "C++ 写的 LLM 本地推理引擎",
+      "display": "llama.cpp"
+    },
+    {
+      "rank": 10,
+      "repo": "QwenLM/qwen-code",
+      "owner": "QwenLM",
+      "name": "qwen-code",
+      "lang": "TypeScript",
+      "new_stars": 151,
+      "total_stars": 29822,
+      "one_liner": "Qwen 出品的终端 AI 编程助手",
+      "display": "qwen-code"
+    }
+  ],
+  "note_title": "astryx 三连冠，Top10 涨 6253 星",
+  "hashtags": [
+    "#GitHub",
+    "#开源项目",
+    "#开发者",
+    "#AIAgent",
+    "#程序员",
+    "#技术分享"
+  ],
+  "sources": [
+    "https://github.com/trending?since=daily",
+    "https://docs.github.com/rest/repos/repos"
+  ],
+  "disclaimer": "按本次页面 stars today 降序取前 10 条；页面实际返回 13 条，第 11–13 名（nvm +63、node +62、TensorFold +54）未入榜，无因数据不可核实而跳过的条目。"
+}

@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-14",
+  "window": "GitHub Trending · daily · 2026-11-14 09:56 UTC+8",
+  "headline": "榜首新增 1925 星",
+  "subhead": "GitHub 飙升榜 Top 10",
+  "kicker": "每日开源项目速览",
+  "overview": "astryx 跌出页面，Google Web 指南库 +1925 星登顶。sure、codex-security 稳居前三，老牌工具回潮，Top10 合计加 4714 星。",
+  "trends": [
+    "Web 指南库两连跳登顶",
+    "三连冠 astryx 跌出页面",
+    "uptime-kuma 老牌工具回榜"
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "repo": "GoogleChrome/modern-web-guidance-src",
+      "owner": "GoogleChrome",
+      "name": "modern-web-guidance-src",
+      "lang": "TypeScript",
+      "new_stars": 1925,
+      "total_stars": 4901,
+      "one_liner": "给编码 Agent 注入现代 Web 最佳实践",
+      "display": "modern-web-guidance-src"
+    },
+    {
+      "rank": 2,
+      "repo": "we-promise/sure",
+      "owner": "we-promise",
+      "name": "sure",
+      "lang": "Ruby",
+      "new_stars": 925,
+      "total_stars": 14773,
+      "one_liner": "开源个人理财应用，看现金流与净资产",
+      "display": "sure"
+    },
+    {
+      "rank": 3,
+      "repo": "openai/codex-security",
+      "owner": "openai",
+      "name": "codex-security",
+      "lang": "TypeScript",
+      "new_stars": 751,
+      "total_stars": 13154,
+      "one_liner": "OpenAI 漏洞扫描 CLI 与 TS SDK",
+      "display": "codex-security"
+    },
+    {
+      "rank": 4,
+      "repo": "ZhuLinsen/daily_stock_analysis",
+      "owner": "ZhuLinsen",
+      "name": "daily_stock_analysis",
+      "lang": "Python",
+      "new_stars": 256,
+      "total_stars": 71649,
+      "one_liner": "LLM 多市场股票智能分析系统",
+      "display": "daily_stock_analysis"
+    },
+    {
+      "rank": 5,
+      "repo": "tailscale/tailcat",
+      "owner": "tailscale",
+      "name": "tailcat",
+      "lang": "Go",
+      "new_stars": 256,
+      "total_stars": 9475,
+      "one_liner": "走 Tailscale 数据面的 netcat 平替",
+      "display": "tailcat"
+    },
+    {
+      "rank": 6,
+      "repo": "Likely7/Veyra-NRVideo",
+      "owner": "Likely7",
+      "name": "Veyra-NRVideo",
+      "lang": "C++",
+      "new_stars": 256,
+      "total_stars": 1637,
+      "one_liner": "视频超分与帧生成增强播放器",
+      "display": "Veyra-NRVideo"
+    },
+    {
+      "rank": 7,
+      "repo": "backnotprop/plannotator",
+      "owner": "backnotprop",
+      "name": "plannotator",
+      "lang": "TypeScript",
+      "new_stars": 108,
+      "total_stars": 10477,
+      "one_liner": "给 Agent 产出做规划标注的工作台",
+      "display": "plannotator"
+    },
+    {
+      "rank": 8,
+      "repo": "block/buzz",
+      "owner": "block",
+      "name": "buzz",
+      "lang": "Rust",
+      "new_stars": 97,
+      "total_stars": 37308,
+      "one_liner": "Block 出品的 Agent 群聊沟通平台",
+      "display": "buzz"
+    },
+    {
+      "rank": 9,
+      "repo": "louislam/uptime-kuma",
+      "owner": "louislam",
+      "name": "uptime-kuma",
+      "lang": "JavaScript",
+      "new_stars": 71,
+      "total_stars": 93876,
+      "one_liner": "自托管拨测监控与状态页工具",
+      "display": "uptime-kuma"
+    },
+    {
+      "rank": 10,
+      "repo": "tradermonty/claude-trading-skills",
+      "owner": "tradermonty",
+      "name": "claude-trading-skills",
+      "lang": "Python",
+      "new_stars": 69,
+      "total_stars": 4195,
+      "one_liner": "面向股民的 Claude Code 技能包",
+      "display": "claude-trading-skills"
+    }
+  ],
+  "note_title": "Web 指南库登顶，Top10 涨 4714 星",
+  "hashtags": [
+    "#GitHub",
+    "#开源项目",
+    "#开发者",
+    "#AIAgent",
+    "#程序员",
+    "#技术分享"
+  ],
+  "sources": [
+    "https://github.com/trending?since=daily",
+    "https://docs.github.com/rest/repos/repos"
+  ],
+  "disclaimer": "按本次页面 stars today 降序取前 10 条；页面实际返回 12 条，第 11–12 名（open-code-review +215、chrome-devtools-mcp +67）未入榜，无因数据不可核实而跳过的条目。"
+}

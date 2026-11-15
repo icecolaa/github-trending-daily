@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-15",
+  "window": "GitHub Trending · daily · 2026-11-15 09:24 UTC+8",
+  "headline": "榜首新增 1231 星",
+  "subhead": "GitHub 飙升榜 Top 10",
+  "kicker": "每日开源项目速览",
+  "overview": "Web 指南库蝉联榜首，单日 +1231 星。阿里代码审查工具与 Chrome DevTools MCP 空降前三，6 席昨日 Top10 留榜，合计加 6023 星。",
+  "trends": [
+    "Web 指南库蝉联榜首",
+    "阿里代码审查空降第二",
+    "6 席昨日前十留榜"
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "repo": "GoogleChrome/modern-web-guidance-src",
+      "owner": "GoogleChrome",
+      "name": "modern-web-guidance-src",
+      "lang": "TypeScript",
+      "new_stars": 1231,
+      "total_stars": 6072,
+      "one_liner": "给编码 Agent 注入现代 Web 最佳实践",
+      "display": "modern-web-guidance-src"
+    },
+    {
+      "rank": 2,
+      "repo": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "lang": "Go",
+      "new_stars": 893,
+      "total_stars": 51453,
+      "one_liner": "阿里混合架构 LLM 代码审查工具",
+      "display": "open-code-review"
+    },
+    {
+      "rank": 3,
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "owner": "ChromeDevTools",
+      "name": "chrome-devtools-mcp",
+      "lang": "TypeScript",
+      "new_stars": 664,
+      "total_stars": 56320,
+      "one_liner": "让编码 Agent 用上 Chrome 开发者工具",
+      "display": "chrome-devtools-mcp"
+    },
+    {
+      "rank": 4,
+      "repo": "we-promise/sure",
+      "owner": "we-promise",
+      "name": "sure",
+      "lang": "Ruby",
+      "new_stars": 659,
+      "total_stars": 15322,
+      "one_liner": "开源个人理财应用，看现金流与净资产",
+      "display": "sure"
+    },
+    {
+      "rank": 5,
+      "repo": "tradermonty/claude-trading-skills",
+      "owner": "tradermonty",
+      "name": "claude-trading-skills",
+      "lang": "Python",
+      "new_stars": 553,
+      "total_stars": 4832,
+      "one_liner": "面向股民的 Claude Code 技能包",
+      "display": "claude-trading-skills"
+    },
+    {
+      "rank": 6,
+      "repo": "dream-num/univer",
+      "owner": "dream-num",
+      "name": "univer",
+      "lang": "TypeScript",
+      "new_stars": 495,
+      "total_stars": 24509,
+      "one_liner": "开源 AI 办公 SDK，表格文档全都有",
+      "display": "univer"
+    },
+    {
+      "rank": 7,
+      "repo": "louislam/uptime-kuma",
+      "owner": "louislam",
+      "name": "uptime-kuma",
+      "lang": "JavaScript",
+      "new_stars": 430,
+      "total_stars": 94249,
+      "one_liner": "自托管拨测监控与状态页工具",
+      "display": "uptime-kuma"
+    },
+    {
+      "rank": 8,
+      "repo": "Likely7/Veyra-NRVideo",
+      "owner": "Likely7",
+      "name": "Veyra-NRVideo",
+      "lang": "C++",
+      "new_stars": 420,
+      "total_stars": 2282,
+      "one_liner": "视频超分与帧生成增强播放器",
+      "display": "Veyra-NRVideo"
+    },
+    {
+      "rank": 9,
+      "repo": "backnotprop/plannotator",
+      "owner": "backnotprop",
+      "name": "plannotator",
+      "lang": "TypeScript",
+      "new_stars": 408,
+      "total_stars": 11143,
+      "one_liner": "给 Agent 产出做规划标注的工作台",
+      "display": "plannotator"
+    },
+    {
+      "rank": 10,
+      "repo": "martin-olivier/airgorah",
+      "owner": "martin-olivier",
+      "name": "airgorah",
+      "lang": "Rust",
+      "new_stars": 270,
+      "total_stars": 5880,
+      "one_liner": "WiFi 安全审计软件",
+      "display": "airgorah"
+    }
+  ],
+  "note_title": "Web 指南库蝉联榜首，Top10 涨 6023 星",
+  "hashtags": [
+    "#GitHub",
+    "#开源项目",
+    "#开发者",
+    "#AIAgent",
+    "#程序员",
+    "#技术分享"
+  ],
+  "sources": [
+    "https://github.com/trending?since=daily",
+    "https://docs.github.com/rest/repos/repos"
+  ],
+  "disclaimer": "按本次页面 stars today 降序取前 10 条；页面实际返回 15 条，第 11–15 名（caveman +227、qwen-code +64、TensorFold +37、LoopForge +33、ag-ui +9）未入榜，无因数据不可核实而跳过的条目。"
+}

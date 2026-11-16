@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-16",
+  "window": "GitHub Trending · daily · 2026-11-16 09:14 UTC+8",
+  "headline": "榜首新增 1219 星",
+  "subhead": "GitHub 飙升榜 Top 10",
+  "kicker": "每日开源项目速览",
+  "overview": "Web 指南库三连冠，单日 +1219 星。AI 办公 SDK univer 增量翻倍冲第二，腾讯与英伟达新项目首进前十，TypeScript 占六席，合计加 6334 星。",
+  "trends": [
+    "Web 指南库三连冠登顶",
+    "univer 增量翻倍冲第二",
+    "TypeScript 项目占六席"
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "repo": "GoogleChrome/modern-web-guidance-src",
+      "owner": "GoogleChrome",
+      "name": "modern-web-guidance-src",
+      "lang": "TypeScript",
+      "new_stars": 1219,
+      "total_stars": 7192,
+      "one_liner": "给编码 Agent 注入现代 Web 最佳实践",
+      "display": "modern-web-guidance-src"
+    },
+    {
+      "rank": 2,
+      "repo": "dream-num/univer",
+      "owner": "dream-num",
+      "name": "univer",
+      "lang": "TypeScript",
+      "new_stars": 988,
+      "total_stars": 25798,
+      "one_liner": "开源 AI 办公 SDK，表格文档全都有",
+      "display": "univer"
+    },
+    {
+      "rank": 3,
+      "repo": "backnotprop/plannotator",
+      "owner": "backnotprop",
+      "name": "plannotator",
+      "lang": "TypeScript",
+      "new_stars": 866,
+      "total_stars": 11849,
+      "one_liner": "给 Agent 产出做规划标注的工作台",
+      "display": "plannotator"
+    },
+    {
+      "rank": 4,
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "owner": "ChromeDevTools",
+      "name": "chrome-devtools-mcp",
+      "lang": "TypeScript",
+      "new_stars": 717,
+      "total_stars": 56947,
+      "one_liner": "让编码 Agent 用上 Chrome 开发者工具",
+      "display": "chrome-devtools-mcp"
+    },
+    {
+      "rank": 5,
+      "repo": "tradermonty/claude-trading-skills",
+      "owner": "tradermonty",
+      "name": "claude-trading-skills",
+      "lang": "Python",
+      "new_stars": 706,
+      "total_stars": 5572,
+      "one_liner": "面向股民的 Claude Code 技能包",
+      "display": "claude-trading-skills"
+    },
+    {
+      "rank": 6,
+      "repo": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "lang": "Go",
+      "new_stars": 691,
+      "total_stars": 52110,
+      "one_liner": "阿里混合架构 LLM 代码审查工具",
+      "display": "open-code-review"
+    },
+    {
+      "rank": 7,
+      "repo": "Tencent/LoopForge",
+      "owner": "Tencent",
+      "name": "LoopForge",
+      "lang": "Go",
+      "new_stars": 423,
+      "total_stars": 1507,
+      "one_liner": "腾讯自托管编码 Agent 交付工作流",
+      "display": "LoopForge"
+    },
+    {
+      "rank": 8,
+      "repo": "ag-ui-protocol/ag-ui",
+      "owner": "ag-ui-protocol",
+      "name": "ag-ui",
+      "lang": "TypeScript",
+      "new_stars": 355,
+      "total_stars": 17882,
+      "one_liner": "Agent 与前端交互的开放协议",
+      "display": "ag-ui"
+    },
+    {
+      "rank": 9,
+      "repo": "google-labs-code/stitch-skills",
+      "owner": "google-labs-code",
+      "name": "stitch-skills",
+      "lang": "TypeScript",
+      "new_stars": 247,
+      "total_stars": 9307,
+      "one_liner": "谷歌 Stitch MCP 配套技能库",
+      "display": "stitch-skills"
+    },
+    {
+      "rank": 10,
+      "repo": "NVIDIA/SkillEvaluator",
+      "owner": "NVIDIA",
+      "name": "SkillEvaluator",
+      "lang": "Python",
+      "new_stars": 122,
+      "total_stars": 1702,
+      "one_liner": "英伟达 Agent 技能评测框架",
+      "display": "SkillEvaluator"
+    }
+  ],
+  "note_title": "Web 指南库三连冠，Top10 涨 6334 星",
+  "hashtags": [
+    "#GitHub",
+    "#开源项目",
+    "#开发者",
+    "#AIAgent",
+    "#程序员",
+    "#技术分享"
+  ],
+  "sources": [
+    "https://github.com/trending?since=daily",
+    "https://docs.github.com/rest/repos/repos"
+  ],
+  "disclaimer": "按本次页面 stars today 降序取前 10 条；页面实际返回 12 条，第 11–12 名（Claude-BugHunter +98、ggml +43）未入榜，无因数据不可核实而跳过的条目。"
+}

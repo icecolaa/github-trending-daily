@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-18",
+  "window": "GitHub Trending · daily · 2026-11-18 09:30 UTC+8",
+  "headline": "榜首新增 1917 星",
+  "subhead": "GitHub 飙升榜 Top 10",
+  "kicker": "每日开源项目速览",
+  "overview": "Agent 技能框架 superpowers +1917 星空降榜首，总星破 31 万。昨日冠军 univer 退居第二，五席新面孔涌入，Top10 合计 +10864 星。",
+  "trends": [
+    "superpowers 空降榜首",
+    "五席新面孔涌入",
+    "univer 让出冠军"
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "repo": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "lang": "Shell",
+      "new_stars": 1917,
+      "total_stars": 319351,
+      "one_liner": "Agent 技能框架与开发方法论",
+      "display": "superpowers"
+    },
+    {
+      "rank": 2,
+      "repo": "dream-num/univer",
+      "owner": "dream-num",
+      "name": "univer",
+      "lang": "TypeScript",
+      "new_stars": 1774,
+      "total_stars": 28913,
+      "one_liner": "开源 AI 办公 SDK，人与 Agent 共用",
+      "display": "univer"
+    },
+    {
+      "rank": 3,
+      "repo": "ag-ui-protocol/ag-ui",
+      "owner": "ag-ui-protocol",
+      "name": "ag-ui",
+      "lang": "TypeScript",
+      "new_stars": 1445,
+      "total_stars": 20009,
+      "one_liner": "Agent 与前端交互的开放协议",
+      "display": "ag-ui"
+    },
+    {
+      "rank": 4,
+      "repo": "google-research/paper-orchestra",
+      "owner": "google-research",
+      "name": "paper-orchestra",
+      "lang": "Python",
+      "new_stars": 1072,
+      "total_stars": 3033,
+      "one_liner": "谷歌多 Agent 自动撰写论文框架",
+      "display": "paper-orchestra"
+    },
+    {
+      "rank": 5,
+      "repo": "elementalsouls/Claude-BugHunter",
+      "owner": "elementalsouls",
+      "name": "Claude-BugHunter",
+      "lang": "Python",
+      "new_stars": 1005,
+      "total_stars": 9350,
+      "one_liner": "Claude Code 漏洞挖掘红队技能包",
+      "display": "Claude-BugHunter"
+    },
+    {
+      "rank": 6,
+      "repo": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "lang": "JavaScript",
+      "new_stars": 883,
+      "total_stars": 305535,
+      "one_liner": "Agent 性能优化系统：技能与记忆",
+      "display": "ECC"
+    },
+    {
+      "rank": 7,
+      "repo": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "name": "open-code-review",
+      "lang": "Go",
+      "new_stars": 763,
+      "total_stars": 53749,
+      "one_liner": "阿里混合架构 LLM 代码审查工具",
+      "display": "open-code-review"
+    },
+    {
+      "rank": 8,
+      "repo": "mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "lang": "Python",
+      "new_stars": 696,
+      "total_stars": 69097,
+      "one_liner": "跨 Reddit/X/HN 的全网调研技能",
+      "display": "last30days-skill"
+    },
+    {
+      "rank": 9,
+      "repo": "backnotprop/plannotator",
+      "owner": "backnotprop",
+      "name": "plannotator",
+      "lang": "TypeScript",
+      "new_stars": 691,
+      "total_stars": 13075,
+      "one_liner": "给 Agent 产出做规划标注的工作台",
+      "display": "plannotator"
+    },
+    {
+      "rank": 10,
+      "repo": "getarcaneapp/arcane",
+      "owner": "getarcaneapp",
+      "name": "arcane",
+      "lang": "Go",
+      "new_stars": 618,
+      "total_stars": 9345,
+      "one_liner": "现代 Docker 管理面板",
+      "display": "arcane"
+    }
+  ],
+  "note_title": "Agent 技能框架登顶，Top10 涨 10864 星",
+  "hashtags": [
+    "#GitHub",
+    "#开源项目",
+    "#开发者",
+    "#AIAgent",
+    "#程序员",
+    "#技术分享"
+  ],
+  "sources": [
+    "https://github.com/trending?since=daily",
+    "https://docs.github.com/rest/repos/repos"
+  ],
+  "disclaimer": "按本次页面 stars today 降序取前 10 条；页面实际返回 15 条，第 11–15 名（LoopForge +591、svelte +477、stitch-skills +350、cursor/plugins +201、minimind +192）未入榜，无因数据不可核实而跳过的条目。"
+}

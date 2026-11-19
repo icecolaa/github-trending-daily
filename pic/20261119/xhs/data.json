@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-19",
+  "window": "GitHub Trending · daily · 2026-11-19 09:44 UTC+8",
+  "headline": "榜首新增 1524 星",
+  "subhead": "GitHub 飙升榜 Top 10",
+  "kicker": "每日开源项目速览",
+  "overview": "多 Agent 论文框架 +1524 星登顶，昨日冠军 superpowers 退居第四。五席留榜项目集体放量，svelte、n8n 等老牌工具返场，合计 +7145 星。",
+  "trends": [
+    "论文框架首次登顶",
+    "老牌框架集体返场",
+    "五席留榜项目放量"
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "repo": "google-research/paper-orchestra",
+      "owner": "google-research",
+      "name": "paper-orchestra",
+      "lang": "Python",
+      "new_stars": 1524,
+      "total_stars": 4324,
+      "one_liner": "谷歌多 Agent 自动撰写研究论文框架",
+      "display": "paper-orchestra"
+    },
+    {
+      "rank": 2,
+      "repo": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "lang": "JavaScript",
+      "new_stars": 1108,
+      "total_stars": 306545,
+      "one_liner": "Agent 运行时性能优化系统：技能与记忆",
+      "display": "ECC"
+    },
+    {
+      "rank": 3,
+      "repo": "mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "lang": "Python",
+      "new_stars": 1059,
+      "total_stars": 70051,
+      "one_liner": "跨 Reddit/X/HN 的全网话题调研技能",
+      "display": "last30days-skill"
+    },
+    {
+      "rank": 4,
+      "repo": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "lang": "Shell",
+      "new_stars": 822,
+      "total_stars": 321346,
+      "one_liner": "Agent 技能框架与软件开发方法论",
+      "display": "superpowers"
+    },
+    {
+      "rank": 5,
+      "repo": "sveltejs/svelte",
+      "owner": "sveltejs",
+      "name": "svelte",
+      "lang": "JavaScript",
+      "new_stars": 692,
+      "total_stars": 89627,
+      "one_liner": "编译式前端 UI 框架，运行时极轻",
+      "display": "svelte"
+    },
+    {
+      "rank": 6,
+      "repo": "getarcaneapp/arcane",
+      "owner": "getarcaneapp",
+      "name": "arcane",
+      "lang": "Go",
+      "new_stars": 547,
+      "total_stars": 9828,
+      "one_liner": "现代化 Docker 容器管理面板",
+      "display": "arcane"
+    },
+    {
+      "rank": 7,
+      "repo": "HKUDS/CLI-Anything",
+      "owner": "HKUDS",
+      "name": "CLI-Anything",
+      "lang": "Python",
+      "new_stars": 389,
+      "total_stars": 59784,
+      "one_liner": "把各类软件封装为 Agent 原生 CLI",
+      "display": "CLI-Anything"
+    },
+    {
+      "rank": 8,
+      "repo": "google-labs-code/stitch-skills",
+      "owner": "google-labs-code",
+      "name": "stitch-skills",
+      "lang": "TypeScript",
+      "new_stars": 365,
+      "total_stars": 10412,
+      "one_liner": "配合 Stitch MCP 的 Agent 技能库",
+      "display": "stitch-skills"
+    },
+    {
+      "rank": 9,
+      "repo": "n8n-io/n8n",
+      "owner": "n8n-io",
+      "name": "n8n",
+      "lang": "TypeScript",
+      "new_stars": 325,
+      "total_stars": 211101,
+      "one_liner": "带原生 AI 能力的工作流自动化平台",
+      "display": "n8n"
+    },
+    {
+      "rank": 10,
+      "repo": "cursor/plugins",
+      "owner": "cursor",
+      "name": "plugins",
+      "lang": "TypeScript",
+      "new_stars": 314,
+      "total_stars": 17225,
+      "one_liner": "Cursor 官方插件规范与官方插件集",
+      "display": "plugins"
+    }
+  ],
+  "note_title": "多 Agent 论文框架登顶，Top10 涨 7145 星",
+  "hashtags": [
+    "#GitHub",
+    "#开源项目",
+    "#开发者",
+    "#AIAgent",
+    "#程序员",
+    "#技术分享"
+  ],
+  "sources": [
+    "https://github.com/trending?since=daily",
+    "https://docs.github.com/rest/repos/repos"
+  ],
+  "disclaimer": "按本次页面 stars today 降序取前 10 条；页面实际返回 19 条，第 11–19 名（SkillEvaluator +312、jquery +266、uv +258、nvm +237、appwrite +232、jiangshan-map +218、awesome-mcp-servers +53、solid +40、openvino +24）未入榜，无因数据不可核实而跳过的条目。"
+}

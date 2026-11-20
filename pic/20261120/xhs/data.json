@@ -1,128 +1,128 @@
 {
   "date": "2026-11-20",
-  "window": "GitHub Trending · daily · 2026-11-20 09:16 UTC+8",
-  "headline": "榜首新增 2028 星",
+  "window": "GitHub Trending · daily · 2026-11-20 22:18 UTC+8",
+  "headline": "榜首新增 1660 星",
   "subhead": "GitHub 飙升榜 Top 10",
   "kicker": "每日开源项目速览",
-  "overview": "技能框架放量 +2028 星重回榜首，安全审计技能包隔日回归居第二。九席面向编码 Agent，五席留榜项目集体放量，合计新增 7729 星，覆盖 4 种语言。",
+  "overview": "晚间日榜换血，漏洞挖掘技能包 +1660 星登顶，今晨冠军 Skills 框架回落第五。下载器、AI 剪辑、小模型与知识库四个非 Agent 工具放量进前十，合计 9699 星。",
   "trends": [
-    "技能框架重回榜首",
-    "九席面向编码 Agent",
-    "五席留榜项目放量"
+    "漏洞挖掘技能包登顶",
+    "非 Agent 工具集体回榜",
+    "下载器剪辑放量约三倍"
   ],
   "items": [
     {
       "rank": 1,
-      "repo": "obra/superpowers",
-      "owner": "obra",
-      "name": "superpowers",
-      "lang": "Shell",
-      "new_stars": 2028,
-      "total_stars": 322094,
-      "one_liner": "Agent 技能框架与可复用软件开发方法论",
-      "display": "superpowers"
-    },
-    {
-      "rank": 2,
       "repo": "elementalsouls/Claude-BugHunter",
       "owner": "elementalsouls",
       "name": "Claude-BugHunter",
       "lang": "Python",
-      "new_stars": 1349,
-      "total_stars": 12558,
-      "one_liner": "Claude Code 漏洞挖掘与红队技能包",
+      "new_stars": 1660,
+      "total_stars": 13528,
+      "one_liner": "Claude Code 漏洞挖掘与外部红队技能包",
       "display": "Claude-BugHunter"
     },
     {
-      "rank": 3,
-      "repo": "mvanhorn/last30days-skill",
-      "owner": "mvanhorn",
-      "name": "last30days-skill",
-      "lang": "Python",
-      "new_stars": 954,
-      "total_stars": 70809,
-      "one_liner": "跨平台检索全网近 30 天话题的调研技能",
-      "display": "last30days-skill"
-    },
-    {
-      "rank": 4,
-      "repo": "HKUDS/CLI-Anything",
-      "owner": "HKUDS",
-      "name": "CLI-Anything",
-      "lang": "Python",
-      "new_stars": 898,
-      "total_stars": 60575,
-      "one_liner": "把任意软件封装成 Agent 原生 CLI",
-      "display": "CLI-Anything"
-    },
-    {
-      "rank": 5,
+      "rank": 2,
       "repo": "firecrawl/firecrawl",
       "owner": "firecrawl",
       "name": "firecrawl",
       "lang": "TypeScript",
-      "new_stars": 825,
-      "total_stars": 204249,
-      "one_liner": "一个 API 完成搜索抓取并接入 550+ 数据源",
+      "new_stars": 1226,
+      "total_stars": 204835,
+      "one_liner": "搜索抓取接入 550+ 数据源的 Agent 知识底座",
       "display": "firecrawl"
     },
     {
-      "rank": 6,
-      "repo": "cursor/plugins",
-      "owner": "cursor",
-      "name": "plugins",
-      "lang": "TypeScript",
-      "new_stars": 384,
-      "total_stars": 17567,
-      "one_liner": "Cursor 官方插件规范与官方插件集",
-      "display": "plugins"
-    },
-    {
-      "rank": 7,
-      "repo": "mjmirza/app-store-compliance",
-      "owner": "mjmirza",
-      "name": "app-store-compliance",
-      "lang": "Shell",
-      "new_stars": 377,
-      "total_stars": 1856,
-      "one_liner": "应用商店过审手册与预提交合规检查",
-      "display": "app-store-compliance"
-    },
-    {
-      "rank": 8,
+      "rank": 3,
       "repo": "XiaoYouChR/Ghost-Downloader-3",
       "owner": "XiaoYouChR",
       "name": "Ghost-Downloader-3",
       "lang": "Python",
-      "new_stars": 341,
-      "total_stars": 12742,
+      "new_stars": 1082,
+      "total_stars": 13409,
       "one_liner": "集成 HTTP/BT/FTP 等多协议的开源下载器",
       "display": "Ghost-Downloader-3"
     },
     {
+      "rank": 4,
+      "repo": "zhouxiaoka/autoclip",
+      "owner": "zhouxiaoka",
+      "name": "autoclip",
+      "lang": "Python",
+      "new_stars": 983,
+      "total_stars": 11925,
+      "one_liner": "一个链接一键剪出短视频与字幕封面文案",
+      "display": "autoclip"
+    },
+    {
+      "rank": 5,
+      "repo": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "lang": "Shell",
+      "new_stars": 888,
+      "total_stars": 322571,
+      "one_liner": "Agent 技能框架与可复用软件开发方法论",
+      "display": "superpowers"
+    },
+    {
+      "rank": 6,
+      "repo": "mjmirza/app-store-compliance",
+      "owner": "mjmirza",
+      "name": "app-store-compliance",
+      "lang": "Shell",
+      "new_stars": 874,
+      "total_stars": 2427,
+      "one_liner": "应用商店过审手册与提交前合规预检",
+      "display": "app-store-compliance"
+    },
+    {
+      "rank": 7,
+      "repo": "jingyaogong/minimind",
+      "owner": "jingyaogong",
+      "name": "minimind",
+      "lang": "Python",
+      "new_stars": 841,
+      "total_stars": 67505,
+      "one_liner": "两小时从零训练 64M 小模型的完整教程",
+      "display": "minimind"
+    },
+    {
+      "rank": 8,
+      "repo": "HKUDS/CLI-Anything",
+      "owner": "HKUDS",
+      "name": "CLI-Anything",
+      "lang": "Python",
+      "new_stars": 774,
+      "total_stars": 61051,
+      "one_liner": "把任意软件封装成 Agent 原生 CLI",
+      "display": "CLI-Anything"
+    },
+    {
       "rank": 9,
-      "repo": "google-labs-code/stitch-skills",
-      "owner": "google-labs-code",
-      "name": "stitch-skills",
+      "repo": "toeverything/AFFiNE",
+      "owner": "toeverything",
+      "name": "AFFiNE",
       "lang": "TypeScript",
-      "new_stars": 302,
-      "total_stars": 10722,
-      "one_liner": "配合 Stitch MCP 的 Agent 技能库",
-      "display": "stitch-skills"
+      "new_stars": 686,
+      "total_stars": 75535,
+      "one_liner": "本地优先、可替代 Notion 与 Miro 的知识库",
+      "display": "AFFiNE"
     },
     {
       "rank": 10,
-      "repo": "cathrynlavery/diagram-design",
-      "owner": "cathrynlavery",
-      "name": "diagram-design",
-      "lang": "HTML",
-      "new_stars": 271,
-      "total_stars": 68643,
-      "one_liner": "面向编码 Agent 的编辑级图表设计技能",
-      "display": "diagram-design"
+      "repo": "mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "lang": "Python",
+      "new_stars": 685,
+      "total_stars": 71216,
+      "one_liner": "跨平台检索全网近 30 天话题的调研技能",
+      "display": "last30days-skill"
     }
   ],
-  "note_title": "GitHub 飙升榜｜榜首 +2028 星",
+  "note_title": "GitHub 飙升榜｜榜首 +1660 星",
   "hashtags": [
     "#GitHub",
     "#开源项目",
@@ -135,5 +135,5 @@
     "https://github.com/trending?since=daily",
     "https://docs.github.com/rest/repos/repos"
   ],
-  "disclaimer": "按本次页面 stars today 降序取前 10 条；页面实际返回 16 条，第 11–16 名（openvino +246、minimind +238、AFFiNE +182、autoclip +126、nginx +73、opensre +38）未入榜，无因数据不可核实而跳过的条目。"
+  "disclaimer": "按本次页面 stars today 降序取前 10 条；页面实际返回 16 条，第 11–16 名（diagram-design +634、opensre +465、stitch-skills +315、cursor/plugins +292、nginx +246、openvino +219）未入榜，无因数据不可核实而跳过的条目。本期为 2026-11-20 22:18 UTC+8 当日第二次抓取，替换今晨 09:16 快照。"
 }

@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-25",
+  "window": "GitHub Trending · daily · 2026-11-25 20:32 UTC+8",
+  "headline": "榜首新增 1644 星",
+  "subhead": "GitHub 飙升榜 Top 10",
+  "kicker": "每日开源项目速览",
+  "overview": "漏洞挖掘技能包以1644星六连冠，页面16条仓库连续第六期零换血，前十项目与昨日完全相同仅名次重排：图表设计技能从第八跃升至第二、第五六名同为950星，合计10353星。",
+  "trends": [
+    "榜首六连冠增量回落",
+    "页面连续六期零换血",
+    "图表技能跃升至第二"
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "repo": "elementalsouls/Claude-BugHunter",
+      "owner": "elementalsouls",
+      "name": "Claude-BugHunter",
+      "lang": "Python",
+      "new_stars": 1644,
+      "total_stars": 22261,
+      "one_liner": "Claude Code 漏洞挖掘与外部红队技能包",
+      "display": "Claude-BugHunter"
+    },
+    {
+      "rank": 2,
+      "repo": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "lang": "HTML",
+      "new_stars": 1133,
+      "total_stars": 72569,
+      "one_liner": "生成自包含 HTML+SVG 编辑级图表的技能",
+      "display": "diagram-design"
+    },
+    {
+      "rank": 3,
+      "repo": "firecrawl/firecrawl",
+      "owner": "firecrawl",
+      "name": "firecrawl",
+      "lang": "TypeScript",
+      "new_stars": 1131,
+      "total_stars": 209538,
+      "one_liner": "搜索抓取接入 550+ 数据源的 Agent 知识底座",
+      "display": "firecrawl"
+    },
+    {
+      "rank": 4,
+      "repo": "HKUDS/CLI-Anything",
+      "owner": "HKUDS",
+      "name": "CLI-Anything",
+      "lang": "Python",
+      "new_stars": 1094,
+      "total_stars": 65334,
+      "one_liner": "把任意软件封装成 Agent 原生 CLI",
+      "display": "CLI-Anything"
+    },
+    {
+      "rank": 5,
+      "repo": "mvanhorn/last30days-skill",
+      "owner": "mvanhorn",
+      "name": "last30days-skill",
+      "lang": "Python",
+      "new_stars": 950,
+      "total_stars": 74737,
+      "one_liner": "跨平台检索全网近 30 天话题的调研技能",
+      "display": "last30days-skill"
+    },
+    {
+      "rank": 6,
+      "repo": "XiaoYouChR/Ghost-Downloader-3",
+      "owner": "XiaoYouChR",
+      "name": "Ghost-Downloader-3",
+      "lang": "Python",
+      "new_stars": 950,
+      "total_stars": 17884,
+      "one_liner": "集成 HTTP/BT/FTP 等多协议的开源下载器",
+      "display": "Ghost-Downloader-3"
+    },
+    {
+      "rank": 7,
+      "repo": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "lang": "Shell",
+      "new_stars": 902,
+      "total_stars": 326241,
+      "one_liner": "Agent 技能框架与可复用软件开发方法论",
+      "display": "superpowers"
+    },
+    {
+      "rank": 8,
+      "repo": "zhouxiaoka/autoclip",
+      "owner": "zhouxiaoka",
+      "name": "autoclip",
+      "lang": "Python",
+      "new_stars": 868,
+      "total_stars": 15891,
+      "one_liner": "一个链接一键剪出短视频与字幕封面文案",
+      "display": "autoclip"
+    },
+    {
+      "rank": 9,
+      "repo": "mjmirza/app-store-compliance",
+      "owner": "mjmirza",
+      "name": "app-store-compliance",
+      "lang": "Shell",
+      "new_stars": 853,
+      "total_stars": 6229,
+      "one_liner": "应用商店过审手册与提交前合规预检",
+      "display": "app-store-compliance"
+    },
+    {
+      "rank": 10,
+      "repo": "jingyaogong/minimind",
+      "owner": "jingyaogong",
+      "name": "minimind",
+      "lang": "Python",
+      "new_stars": 828,
+      "total_stars": 70731,
+      "one_liner": "两小时从零训练 64M 大模型的开源项目",
+      "display": "minimind"
+    }
+  ],
+  "note_title": "GitHub 飙升榜｜榜首 +1644 星",
+  "hashtags": [
+    "#GitHub",
+    "#开源项目",
+    "#开发者",
+    "#AIAgent",
+    "#程序员",
+    "#技术分享"
+  ],
+  "sources": [
+    "https://github.com/trending?since=daily",
+    "https://docs.github.com/rest/repos/repos"
+  ],
+  "disclaimer": "按本次页面的 stars today 降序取前 10 条；页面实际返回 16 条，全部条目的新增星与总星均可核实，故未缩减数量；同分按页面顺序，本期第 5、6 名同为 950 星。"
+}
